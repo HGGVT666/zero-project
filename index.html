@@ -1,48 +1,106 @@
-body {
- <section class="hero">
-  <h1>ZERO</h1>
-  <p>Not a promise. Not a roadmap.</p>
-</section>
-<section class="gallery">
-  <img src="images/zr01.jpg" loading="lazy">
-  <img src="images/zr02.jpg" loading="lazy">
-</section>
-background: #000;
-  color: #aaa;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZERO</title>
 
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #aaa;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
 
-.hero h1 {
-  font-size: 48px;
-  letter-spacing: 6px;
-  margin: 0;
-  color: #fff;
-}
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
-.hero p {
-  margin-top: 16px;
-  font-size: 14px;
-  color: #777;
-}
+    .hero h1 {
+      margin: 0;
+      font-size: 48px;
+      letter-spacing: 6px;
+      color: #fff;
+    }
 
-.gallery {
-  padding: 120px 0;
-}
+    .hero p {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #777;
+    }
 
-.gallery img {
-  max-width: 720px;
-  width: 100%;
-  display: block;
-  margin: 140px auto;
-  border-radius: 6px;
-}
+    /* GALLERY */
+    .gallery {
+      padding: 120px 0;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 720px;
+      display: block;
+      margin: 140px auto;
+      border-radius: 6px;
+    }
+
+    /* OUTRO */
+    .outro {
+      text-align: center;
+      margin: 160px auto;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 36px;
+        letter-spacing: 4px;
+      }
+
+      .gallery img {
+        margin: 96px auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>ZERO</h1>
+    <p>Not a promise. Not a roadmap.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <img src="images/zr01.jpg" loading="lazy">
+    <img src="images/zr02.jpg" loading="lazy">
+    <img src="images/zr03.PNG" loading="lazy">
+    <img src="images/zr04.PNG" loading="lazy">
+    <img src="images/zr05.PNG" loading="lazy">
+    <img src="images/zr06.PNG" loading="lazy">
+    <img src="images/zr07.PNG" loading="lazy">
+    <img src="images/zr08.PNG" loading="lazy">
+    <img src="images/zr09.PNG" loading="lazy">
+    <img src="images/zr10.PNG" loading="lazy">
+    <img src="images/zr11.PNG" loading="lazy">
+    <img src="images/zr12.PNG" loading="lazy">
+    <img src="images/zr13.PNG" loading="lazy">
+  </section>
+
+  <!-- OUTRO -->
+  <div class="outro">
+    <p>You’ve reached the end.</p>
+    <p>Nothing more is promised.</p>
+  </div>
+
+</body>
+</html>
