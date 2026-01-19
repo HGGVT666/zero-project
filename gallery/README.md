@@ -4,28 +4,29 @@
   <meta charset="utf-8">
   <title>ZERO — Canon Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #e0e0e0;
-      font-family: Arial, sans-serif;
-    }
-    .panel {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 16px;
-    }
-    .panel img {
-      width: 100%;
-      display: block;
-    }
-    .caption {
-      margin-top: 16px;
-      font-size: 18px;
-      line-height: 1.6;
-      color: #aaa;
-    }
+.caption{
+  max-width: 900px;
+  margin: 22px auto 0;
+  padding: 0 20px;
+  font-size: 18px;      /* desktop */
+  line-height: 1.8;
+  opacity: .85;
+}
+
+/* Mobile tối ưu */
+@media (max-width: 768px){
+  .caption{
+    font-size: 20px;    /* mobile to hơn */
+    line-height: 1.85;
+  }
+
+  .header h1{
+    font-size: 34px;
+    letter-spacing: 6px;
+  }
+
+  .header p{
+    font-size: 16px;
   </style>
 </head>
 <body>
