@@ -1,63 +1,81 @@
-# ZERO Protocol
-
-ZERO is not a promise.  
-ZERO is not a roadmap.  
-ZERO is not an investment thesis.
-
-ZERO is an education-first crypto experiment.
-
-This project was created from failure, not from hype.
+# ZERO – Frequently Asked Questions
 
 ---
 
-## What is ZERO?
+## Is ZERO an investment?
 
-ZERO exists to:
-- Educate newcomers before they risk capital
-- Warn against FOMO, scams, and manipulation
-- Encourage learning before participation
+No.
 
-ZERO does not exist to:
-- Promise profits
-- Protect price
-- Create artificial hype
-
-If you do not understand, do not participate.  
-If you understand, decide for yourself.
+ZERO does not promise profit.  
+ZERO does not protect price.  
+ZERO is an education-first experiment.
 
 ---
 
-## Transparency
+## Why does ZERO exist?
 
-Everything related to ZERO is public:
+ZERO exists because many people enter crypto without understanding
+and pay for it with money, trust, and sometimes their lives.
 
-- Smart contract source code
-- Tokenomics
-- Treasury rules
-- Community principles
-
-This repository exists so anyone can verify, question, and challenge.
+ZERO exists to slow people down.
 
 ---
 
-## Core Principles
+## Why does the founder receive 5%?
 
-- Knowledge comes before price
-- Transparency comes before trust
-- Responsibility comes before profit
-- If ZERO loses its purpose, ZERO should return to zero
+The 5% allocation is not a reward.
+It is a responsibility allocation.
 
----
+It exists to:
+- Sustain the initiator during the early non-funded phase
+- Cover basic operational costs
+- Ensure education and documentation continue
 
-## Important Notice
-
-ZERO is not financial advice.  
-Participation involves risk.  
-Loss is possible.
-
-Education does not eliminate risk,  
-but ignorance guarantees it.
+This allocation is transparent
+and can be questioned or locked by community decision.
 
 ---
 
-Everything begins from ZERO.
+## Is the code verified?
+
+The deployed contract bytecode fully matches the published source code.
+
+Due to identical bytecode with an existing verified contract,
+BSCScan temporarily limits additional source verification.
+
+Transparency is ensured via:
+- Public GitHub repository
+- On-chain bytecode comparison
+
+---
+
+## Who controls ZERO?
+
+No single entity controls ZERO.
+
+- Token logic is immutable
+- Treasury rules are on-chain
+- Power is designed to be transferred or locked
+
+---
+
+## Can ZERO fail?
+
+Yes.
+
+If the community leaves, ZERO returns to zero.
+That outcome is acceptable.
+
+Failure without learning is a loss.
+Failure with learning is the purpose.
+
+---
+
+## Where can I verify everything?
+
+- Smart contracts: `/contracts`
+- Tokenomics: `/tokenomics`
+- Treasury rules: `/treasury`
+
+Read first.  
+Decide later.
