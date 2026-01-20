@@ -79,3 +79,5 @@ Failure with learning is the purpose.
 
 Read first.  
 Decide later.
+Liquidity is minimal and experimental.
+Price is not protected.
