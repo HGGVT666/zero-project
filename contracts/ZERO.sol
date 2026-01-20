@@ -1,6 +1,23 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
+/**
+ * ZERO Token
+ *
+ * Total Supply: 1,000,000,000 ZERO
+ * Mint: Disabled
+ * Tax: 0%
+ *
+ * ZERO is not designed to promise profit.
+ * ZERO exists for education and awareness.
+ */
+
+contract ZERO {
+    ...
+}
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
 contract ZERO {
     string public name = "ZERO";
     string public symbol = "ZERO";
