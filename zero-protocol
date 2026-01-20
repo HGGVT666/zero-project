@@ -1,1 +1,16 @@
-
+zero-protocol/
+│
+├─ contracts/
+│   ├─ ZERO.sol
+│   └─ CommunityTreasury.sol
+│
+├─ tokenomics/
+│   ├─ TOKENOMICS_EN.md
+│
+├─ treasury/
+│   └─ TREASURY_RULES.md
+│
+├─ docs/
+│   └─ ZERO_FOR_NEWCOMERS.md
+│
+└─ README.md
