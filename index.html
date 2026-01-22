@@ -14,31 +14,39 @@
       color: #000000;
     }
 
+    /* HEADER */
     header {
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid #000;
+    }
+
+    .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 24px 40px;
-      border-bottom: 1px solid #000;
     }
 
-    header h1 {
-      margin: 0;
+    .logo a {
       font-size: 22px;
       letter-spacing: 1px;
+      text-decoration: none;
+      color: #000;
     }
 
     nav a {
-      margin-left: 24px;
+      margin-left: 28px;
       text-decoration: none;
       color: #999;
-      font-size: 14px;
+      font-size: 15px;
     }
 
     nav a:hover {
       color: #000;
     }
 
+    /* MAIN */
     main {
       max-width: 720px;
       margin: 120px auto;
@@ -74,8 +82,8 @@
 
     .gallery-grid img {
       width: 100%;
-      cursor: pointer;
       border: 1px solid #eee;
+      cursor: pointer;
     }
 
     /* MODAL */
@@ -89,90 +97,4 @@
 
     .modal img {
       display: block;
-      max-width: 90%;
-      max-height: 90%;
-      margin: 5% auto;
-    }
-
-    .modal:target {
-      display: block;
-    }
-
-    footer {
-      border-top: 1px solid #000;
-      padding: 24px 20px;
-      text-align: center;
-      font-size: 13px;
-      color: #999;
-    }
-
-    footer a {
-      color: #999;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #000;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h1>ZERO</h1>
-  <nav>
-    <a href="#">Whitepaper</a>
-    <a href="#">Info</a>
-    <a href="#">Community</a>
-  </nav>
-</header>
-
-<main>
-  <h2>ZERO is not zero.</h2>
-  <p>Crypto can go to zero anytime.</p>
-  <p>From zero, we rebuild trust.</p>
-
-  <div class="gallery">
-    <h3>Visual</h3>
-    <div class="gallery-grid">
-      <a href="#img01"><img src="images/zr01.jpg"></a>
-      <a href="#img02"><img src="images/zr02.jpg"></a>
-      <a href="#img03"><img src="images/zr03.PNG"></a>
-      <a href="#img04"><img src="images/zr04.PNG"></a>
-      <a href="#img05"><img src="images/zr05.PNG"></a>
-      <a href="#img06"><img src="images/zr06.PNG"></a>
-      <a href="#img07"><img src="images/zr07.PNG"></a>
-      <a href="#img08"><img src="images/zr08.PNG"></a>
-      <a href="#img09"><img src="images/zr09.PNG"></a>
-      <a href="#img10"><img src="images/zr10.PNG"></a>
-      <a href="#img11"><img src="images/zr11.PNG"></a>
-      <a href="#img12"><img src="images/zr12.PNG"></a>
-      <a href="#img13"><img src="images/zr13.PNG"></a>
-    </div>
-  </div>
-</main>
-
-<!-- MODALS -->
-<div id="img01" class="modal"><a href="#"><img src="images/zr01.jpg"></a></div>
-<div id="img02" class="modal"><a href="#"><img src="images/zr02.jpg"></a></div>
-<div id="img03" class="modal"><a href="#"><img src="images/zr03.PNG"></a></div>
-<div id="img04" class="modal"><a href="#"><img src="images/zr04.PNG"></a></div>
-<div id="img05" class="modal"><a href="#"><img src="images/zr05.PNG"></a></div>
-<div id="img06" class="modal"><a href="#"><img src="images/zr06.PNG"></a></div>
-<div id="img07" class="modal"><a href="#"><img src="images/zr07.PNG"></a></div>
-<div id="img08" class="modal"><a href="#"><img src="images/zr08.PNG"></a></div>
-<div id="img09" class="modal"><a href="#"><img src="images/zr09.PNG"></a></div>
-<div id="img10" class="modal"><a href="#"><img src="images/zr10.PNG"></a></div>
-<div id="img11" class="modal"><a href="#"><img src="images/zr11.PNG"></a></div>
-<div id="img12" class="modal"><a href="#"><img src="images/zr12.PNG"></a></div>
-<div id="img13" class="modal"><a href="#"><img src="images/zr13.PNG"></a></div>
-
-<footer>
-  <p>ZERO © 2026 — From Zero, We Begin Again</p>
-  <p>No financial advice. Participation is voluntary.</p>
-  <p><a href="https://www.tiktok.com/@zero_not_0" target="_blank">TikTok</a></p>
-</footer>
-
-</body>
-</html>
+      max-width
