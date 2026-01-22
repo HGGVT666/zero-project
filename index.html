@@ -1,82 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>ZERO | From Zero to Hero</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-<div style="margin:30px auto; text-align:center;">
-  <a href="https://www.tiktok.com/@zero_not_0"
-     target="_blank"
-     style="text-decoration:none; color:white; font-size:16px;">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZERO</title>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/TikTok_logo.svg"
-         alt="TikTok ZERO"
-         width="22"
-         style="vertical-align:middle;">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #ffffff;
+      color: #000000;
+    }
 
-    <span style="margin-left:6px;">TikTok ZERO</span>
-  </a>
-</div>
-  body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #0e0e0e;
-  color: #ffffff;
-}
-header {
-  padding: 20px;
-  border-bottom: 1px solid #222;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header h1 {
-  margin: 0;
-  font-size: 20px;
-}
-nav a {
-  margin-left: 15px;
-  color: #aaa;
-  text-decoration: none;
-  font-size: 14px;
-  cursor: pointer;
-}
-nav a.active {
-  color: #fff;
-  border-bottom: 1px solid #fff;
-}
-section {
-  display: none;
-  padding: 30px;
-  max-width: 800px;
-}
-section.active {
-  display: block;
-}
-.button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 16px;
-  border: 1px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
-.footer {
-  padding: 20px;
-  font-size: 12px;
-  color: #777;
-  border-top: 1px solid #222;
-}
-.code {
-  background: #111;
-  padding: 10px;
-  margin-top: 10px;
-  font-size: 13px;
-  word-break: break-all;
-}
-</style>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 40px;
+      border-bottom: 1px solid #000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #999;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 120px auto;
+      padding: 0 20px;
+    }
+
+    main h2 {
+      font-size: 42px;
+      margin-bottom: 24px;
+    }
+
+    main p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 6px 0;
+    }
+
+    /* GALLERY */
+    .gallery {
+      margin-top: 60px;
+    }
+
+    .gallery h3 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid #eee;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 999;
+    }
+
+    .modal img {
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+      margin: 5% auto;
+    }
+
+    .modal:target {
+      display: block;
+    }
+
+    footer {
+      border-top: 1px solid #000;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+    }
+
+    footer a {
+      color: #999;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #000;
+    }
+  </style>
 </head>
 
 <body>
@@ -84,98 +122,57 @@ section.active {
 <header>
   <h1>ZERO</h1>
   <nav>
-    <a onclick="showTab('home')" class="active" id="tab-home">Home</a>
-    <a onclick="showTab('whitepaper')" id="tab-whitepaper">Whitepaper</a>
-    <a onclick="showTab('info')" id="tab-info">Info</a>
-    <a onclick="showTab('community')" id="tab-community">Community</a>
+    <a href="#">Whitepaper</a>
+    <a href="#">Info</a>
+    <a href="#">Community</a>
   </nav>
 </header>
 
-<section id="home" class="active">
+<main>
   <h2>ZERO is not zero.</h2>
-  <p>
-    Crypto can go to zero anytime.<br>
-    From zero, we rebuild trust.
-  </p>
-  <a class="button" onclick="showTab('whitepaper')">Read Whitepaper</a>
-  <br><br>
-  <a class="button" href="https://t.me/zero_not_0" target="_blank">Telegram</a>
-</section>
+  <p>Crypto can go to zero anytime.</p>
+  <p>From zero, we rebuild trust.</p>
 
-<section id="whitepaper">
-  <h2>Whitepaper</h2>
-
-  <h3>Philosophy</h3>
-  <p>
-    ZERO is a reminder, not a promise.<br>
-    A symbol of honesty in crypto.
-  </p>
-
-  <h3>Why ZERO exists</h3>
-  <p>
-    Crypto needs awareness more than hype.<br>
-    ZERO exists to remind people of risk.
-  </p>
-
-  <h3>What ZERO is NOT</h3>
-  <p>
-    ZERO is not financial advice.<br>
-    ZERO does not guarantee profit.
-  </p>
-
-  <a class="button" href="#">Download PDF</a>
-</section>
-
-<section id="info">
-  <h2>Official Information</h2>
-
-  <h3>Links</h3>
-  <p>
-    🌐 <a href="https://zerocanon.xyz" target="_blank">Website</a><br>
-    🐦 <a href="https://x.com/zero_not_0" target="_blank">X (Twitter)</a><br>
-    📢 <a href="https://t.me/zero_not_0" target="_blank">Telegram</a>
-  </p>
-
-  <h3>Token Information</h3>
-  <div class="code">
-    Token: ZERO<br>
-    Chain: BSC<br>
-    Contract:<br>
-    0xa114fbc9C67E76666D4D5DcA5C8fAd27A525333e
+  <div class="gallery">
+    <h3>Visual</h3>
+    <div class="gallery-grid">
+      <a href="#img01"><img src="images/zr01.jpg"></a>
+      <a href="#img02"><img src="images/zr02.jpg"></a>
+      <a href="#img03"><img src="images/zr03.PNG"></a>
+      <a href="#img04"><img src="images/zr04.PNG"></a>
+      <a href="#img05"><img src="images/zr05.PNG"></a>
+      <a href="#img06"><img src="images/zr06.PNG"></a>
+      <a href="#img07"><img src="images/zr07.PNG"></a>
+      <a href="#img08"><img src="images/zr08.PNG"></a>
+      <a href="#img09"><img src="images/zr09.PNG"></a>
+      <a href="#img10"><img src="images/zr10.PNG"></a>
+      <a href="#img11"><img src="images/zr11.PNG"></a>
+      <a href="#img12"><img src="images/zr12.PNG"></a>
+      <a href="#img13"><img src="images/zr13.PNG"></a>
+    </div>
   </div>
+</main>
 
-  <p>
-    ⚠️ ZERO has only one official X and Telegram.<br>
-    Any other source is not official.
-  </p>
-</section>
+<!-- MODALS -->
+<div id="img01" class="modal"><a href="#"><img src="images/zr01.jpg"></a></div>
+<div id="img02" class="modal"><a href="#"><img src="images/zr02.jpg"></a></div>
+<div id="img03" class="modal"><a href="#"><img src="images/zr03.PNG"></a></div>
+<div id="img04" class="modal"><a href="#"><img src="images/zr04.PNG"></a></div>
+<div id="img05" class="modal"><a href="#"><img src="images/zr05.PNG"></a></div>
+<div id="img06" class="modal"><a href="#"><img src="images/zr06.PNG"></a></div>
+<div id="img07" class="modal"><a href="#"><img src="images/zr07.PNG"></a></div>
+<div id="img08" class="modal"><a href="#"><img src="images/zr08.PNG"></a></div>
+<div id="img09" class="modal"><a href="#"><img src="images/zr09.PNG"></a></div>
+<div id="img10" class="modal"><a href="#"><img src="images/zr10.PNG"></a></div>
+<div id="img11" class="modal"><a href="#"><img src="images/zr11.PNG"></a></div>
+<div id="img12" class="modal"><a href="#"><img src="images/zr12.PNG"></a></div>
+<div id="img13" class="modal"><a href="#"><img src="images/zr13.PNG"></a></div>
 
-<section id="community">
-  <h2>Community</h2>
-  <p>
-    ZERO is community-driven.<br>
-    No hype. No promises.<br>
-    Only transparency.
-  </p>
-  <a class="button" href="https://t.me/zero_not_0" target="_blank">Join Telegram</a>
-</section>
-
-<div class="footer">
-  ZERO © 2026 — From Zero, We Begin Again<br>
-  No financial advice. Participation is voluntary.
-</div>
-
-<script>
-function showTab(tab) {
-  const sections = document.querySelectorAll('section');
-  const tabs = document.querySelectorAll('nav a');
-  sections.forEach(s => s.classList.remove('active'));
-  tabs.forEach(t => t.classList.remove('active'));
-
-  document.getElementById(tab).classList.add('active');
-  document.getElementById('tab-' + tab).classList.add('active');
-}
-</script>
+<footer>
+  <p>ZERO © 2026 — From Zero, We Begin Again</p>
+  <p>No financial advice. Participation is voluntary.</p>
+  <p><a href="https://www.tiktok.com/@zero_not_0" target="_blank">TikTok</a></p>
+</footer>
 
 </body>
 </html>
