@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZERO</title>
+
+  <title>ZERO — From Zero, We Begin Again</title>
+  <meta name="description" content="ZERO is a symbolic crypto project. Crypto can go to zero anytime. From zero, we rebuild trust." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ZERO — From Zero, We Begin Again" />
+  <meta property="og:description" content="Crypto can go to zero anytime. ZERO exists to remind participants of risk and responsibility." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zerocanon.xyz" />
 
   <style>
     body {
@@ -14,16 +22,19 @@
       color: #000000;
     }
 
-    /* HEADER */
     header {
       border-bottom: 1px solid #000;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 10;
     }
 
     .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 24px 40px;
+      padding: 22px 40px;
     }
 
     .logo a {
@@ -44,64 +55,53 @@
       color: #000;
     }
 
-    /* MAIN */
     main {
       max-width: 720px;
       margin: 120px auto;
       padding: 0 20px;
     }
 
-    main h2 {
+    h2 {
       font-size: 42px;
       margin-bottom: 24px;
     }
 
-    main p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin: 6px 0;
+    h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
     }
 
-    /* WHITEPAPER BLOCK */
-    .whitepaper-box {
-      margin-top: 60px;
-      padding: 24px;
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 8px 0;
+    }
+
+    .box {
+      margin-top: 80px;
+      padding: 28px;
       border: 1px solid #000;
     }
 
-    .whitepaper-box h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .whitepaper-links a {
+    .box a {
       display: inline-block;
       margin-right: 20px;
-      margin-top: 10px;
+      margin-top: 12px;
       font-size: 18px;
       text-decoration: none;
       color: #000;
       border-bottom: 1px solid #000;
     }
 
-    /* FOOTER */
-    footer {
-      border-top: 1px solid #000;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    footer p {
+    .contract {
       font-size: 14px;
-      color: #999;
-      margin: 6px 0;
+      word-break: break-all;
+      margin-top: 8px;
     }
 
-    /* SOCIAL LINKS */
     .social {
-      margin-top: 30px;
+      margin-top: 24px;
       display: flex;
-      justify-content: center;
       gap: 28px;
       flex-wrap: wrap;
     }
@@ -119,6 +119,19 @@
       width: 32px;
       height: 32px;
     }
+
+    footer {
+      border-top: 1px solid #000;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 120px;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #999;
+      margin: 6px 0;
+    }
   </style>
 </head>
 
@@ -127,50 +140,71 @@
 <header>
   <div class="header-inner">
     <div class="logo">
-      <a href="index.html">ZERO</a>
+      <a href="#top">ZERO</a>
     </div>
     <nav>
-      <a href="whitepaper.html">Whitepaper</a>
-      <a href="#whitepaper">Download</a>
+      <a href="#info">Info</a>
+      <a href="#whitepaper">Whitepaper</a>
+      <a href="#contract">Contract</a>
       <a href="#community">Community</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="top">
   <h2>ZERO is not zero.</h2>
   <p>Crypto can go to zero anytime.</p>
   <p>From zero, we rebuild trust.</p>
 
-  <!-- WHITEPAPER SECTION -->
-  <div id="whitepaper" class="whitepaper-box">
-    <h3>ZERO Whitepaper</h3>
+  <!-- INFO -->
+  <div id="info" class="box">
+    <h3>What is ZERO?</h3>
     <p>
-      ZERO is a symbolic crypto project built to remind participants
-      that awareness comes before profit.
+      ZERO is a symbolic crypto project.
+      It exists to remind participants of a simple truth:
+      crypto can go to zero anytime.
     </p>
+    <p>
+      ZERO does not promise profit.
+      ZERO does not sell dreams.
+      ZERO does not guarantee outcomes.
+    </p>
+    <p>
+      ZERO was created after loss, not before success.
+      It exists as a pause — a moment to think before acting.
+    </p>
+  </div>
 
-    <div class="whitepaper-links">
-      <a href="whitepaper.html">Read Whitepaper (HTML)</a>
-      <a href="ZERO_Whitepaper_v1.pdf" target="_blank">Download PDF</a>
-    </div>
+  <!-- WHITEPAPER -->
+  <div id="whitepaper" class="box">
+    <h3>Whitepaper</h3>
+    <a href="whitepaper.html">Read Whitepaper (HTML)</a>
+    <a href="ZERO_Whitepaper_v1.pdf" target="_blank">Download PDF</a>
+  </div>
+
+  <!-- CONTRACT -->
+  <div id="contract" class="box">
+    <h3>Contract</h3>
+    <p class="contract">
+      Address: 0xa114fbc9c67e76666d4d5dca5c8fad27a525333e
+    </p>
+    <a href="https://bscscan.com/token/0xa114fbc9c67e76666d4d5dca5c8fad27a525333e" target="_blank">
+      Verify on BscScan
+    </a>
   </div>
 
   <!-- COMMUNITY -->
-  <div id="community" style="margin-top:80px;">
+  <div id="community" class="box">
     <h3>Community</h3>
-
     <div class="social">
       <a href="https://www.tiktok.com/@zero_not_0" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/TikTok_logo.svg">
         <span>TikTok</span>
       </a>
-
       <a href="https://t.me/zerocanon" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
         <span>Telegram</span>
       </a>
-
       <a href="https://x.com/zerocanon" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg">
         <span>X</span>
