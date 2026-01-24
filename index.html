@@ -18,7 +18,21 @@ html{scroll-behavior:smooth;}
 body{
   background:#000;
   color:#fff;
+  position:relative;
 }
+
+/* ===== GRAIN BACKGROUND ===== */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:0;
+}
+
+nav, section, footer{position:relative; z-index:1;}
 
 /* ===== MENU ===== */
 nav{
@@ -27,7 +41,7 @@ nav{
   width:100%;
   background:#000;
   border-bottom:1px solid #222;
-  z-index:999;
+  z-index:10;
 }
 nav ul{
   display:flex;
@@ -35,9 +49,7 @@ nav ul{
   list-style:none;
   padding:14px 0;
 }
-nav ul li{
-  margin:0 16px;
-}
+nav ul li{margin:0 16px;}
 nav ul li a{
   color:#fff;
   text-decoration:none;
@@ -51,15 +63,28 @@ nav ul li a:hover{opacity:1;}
 section{
   min-height:100vh;
   padding:120px 20px 60px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* ===== BOX ===== */
+.box{
+  border:1px solid #222;
+  padding:50px 30px;
+  max-width:720px;
+  width:100%;
   text-align:center;
 }
+
+/* ===== TEXT ===== */
 h1,h2{
   font-weight:normal;
   letter-spacing:4px;
   margin-bottom:24px;
 }
 p{
-  max-width:620px;
+  max-width:560px;
   margin:0 auto 18px;
   line-height:1.7;
   opacity:.8;
@@ -67,12 +92,21 @@ p{
 }
 
 /* ===== HERO ===== */
-#hero h1{
-  font-size:54px;
-}
+#hero h1{font-size:54px;}
 
-/* ===== COMMUNITY ===== */
-#community img{
+/* ===== COMMUNITY LINKS ===== */
+#community a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  letter-spacing:1px;
+  opacity:.7;
+  margin:14px 0;
+}
+#community a:hover{opacity:1;}
+
+/* ===== IFO IMAGES ===== */
+#ifo img{
   max-width:320px;
   width:100%;
   display:block;
@@ -98,65 +132,82 @@ footer{
 <ul>
   <li><a href="#hero">ZERO</a></li>
   <li><a href="#community">Community</a></li>
+  <li><a href="#ifo">IFO</a></li>
   <li><a href="manifesto.html">Manifesto</a></li>
   <li><a href="whitepaper.html">Whitepaper</a></li>
-  <li><a href="info.html">Info</a></li>
 </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-<h1>ZERO</h1>
+  <div class="box">
+    <h1>ZERO</h1>
 
-<p>
-ZERO không hứa làm giàu.<br>
-ZERO chỉ tồn tại để nhắc rằng crypto có thể về zero.
-</p>
+    <p>
+      ZERO không hứa làm giàu.<br>
+      ZERO chỉ tồn tại để nhắc rằng crypto có thể về zero.
+    </p>
 
-<p>
-Không roadmap.<br>
-Không VC.<br>
-Không KOL.
-</p>
+    <p>
+      Không roadmap.<br>
+      Không VC.<br>
+      Không KOL.
+    </p>
+  </div>
 </section>
 
 <!-- COMMUNITY -->
 <section id="community">
-<h2>COMMUNITY</h2>
+  <div class="box">
+    <h2>COMMUNITY</h2>
 
-<img id="communitySlide" src="images/zr03.PNG" alt="ZERO Community">
+    <a href="https://zerocanon.xyz" target="_blank">Website</a>
+    <a href="https://x.com/your_x_here" target="_blank">X (Twitter)</a>
+    <a href="https://t.me/your_telegram_here" target="_blank">Telegram</a>
+    <a href="https://www.tiktok.com/@your_tiktok_here" target="_blank">TikTok</a>
 
-<p>
-ZERO không xây cộng đồng bằng lời hứa.
-</p>
+    <p>
+      ZERO không kêu gọi.<br>
+      ZERO chỉ đặt sẵn những cánh cửa.
+    </p>
+  </div>
+</section>
 
-<p>
-ZERO tồn tại cho những người đã từng về zero.
-</p>
+<!-- IFO -->
+<section id="ifo">
+  <div class="box">
+    <h2>IFO</h2>
+
+    <img id="ifoSlide" src="images/zr03.PNG" alt="ZERO IFO">
+
+    <p>
+      ZERO không IFO để gọi vốn.<br>
+      ZERO tồn tại trước cả khi có người mua.
+    </p>
+  </div>
 </section>
 
 <footer>
 ZERO — back to zero.
 </footer>
 
-<!-- SLIDESHOW SCRIPT -->
+<!-- IFO SLIDESHOW -->
 <script>
-const images = [
+const images=[
   "images/zr03.PNG",
   "images/zr04.PNG",
   "images/zr05.PNG",
   "images/zr06.PNG"
 ];
-
-let i = 0;
-const img = document.getElementById("communitySlide");
+let i=0;
+const img=document.getElementById("ifoSlide");
 
 setInterval(()=>{
-  img.style.opacity = 0;
+  img.style.opacity=0;
   setTimeout(()=>{
-    i = (i + 1) % images.length;
-    img.src = images[i];
-    img.style.opacity = 1;
+    i=(i+1)%images.length;
+    img.src=images[i];
+    img.style.opacity=1;
   },800);
 },4000);
 </script>
