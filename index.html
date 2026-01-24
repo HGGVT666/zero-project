@@ -1,180 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>ZERO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ZERO — Crypto is Impermanent</title>
-  <meta name="description" content="ZERO is not an investment. ZERO is a reminder. Crypto can go to zero anytime." />
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      color: #2b1e0f;
-      background:
-        radial-gradient(circle at top, #fff3c4 0%, #e8c872 40%, #d4a843 70%, #b8892d 100%);
-    }
+html{scroll-behavior:smooth;}
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255,245,210,0.95);
-      border-bottom: 1px solid rgba(0,0,0,0.3);
-    }
+body{
+  background:#000;
+  color:#fff;
+}
 
-    .header-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 22px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* ===== MENU ===== */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#000;
+  border-bottom:1px solid #222;
+  z-index:999;
+}
+nav ul{
+  display:flex;
+  justify-content:center;
+  list-style:none;
+  padding:14px 0;
+}
+nav ul li{
+  margin:0 16px;
+}
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:1px;
+  opacity:.7;
+}
+nav ul li a:hover{opacity:1;}
 
-    .logo {
-      font-size: 22px;
-      letter-spacing: 1px;
-    }
+/* ===== SECTION ===== */
+section{
+  min-height:100vh;
+  padding:120px 20px 60px;
+  text-align:center;
+}
+h1,h2{
+  font-weight:normal;
+  letter-spacing:4px;
+  margin-bottom:24px;
+}
+p{
+  max-width:620px;
+  margin:0 auto 18px;
+  line-height:1.7;
+  opacity:.8;
+  font-size:15px;
+}
 
-    nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #6a4a12;
-      font-size: 15px;
-    }
+/* ===== HERO ===== */
+#hero h1{
+  font-size:54px;
+}
 
-    nav a:hover {
-      color: #000;
-    }
+/* ===== COMMUNITY ===== */
+#community img{
+  max-width:320px;
+  width:100%;
+  display:block;
+  margin:32px auto;
+  transition:opacity .8s ease;
+}
 
-    main {
-      max-width: 760px;
-      margin: 120px auto;
-      padding: 0 20px;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 26px;
-      margin-top: 80px;
-      margin-bottom: 14px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.8;
-      margin: 10px 0;
-    }
-
-    .box {
-      margin-top: 80px;
-      padding: 28px;
-      border: 1px solid rgba(0,0,0,0.35);
-      background: rgba(255,255,255,0.6);
-    }
-
-    .contract {
-      font-size: 14px;
-      word-break: break-all;
-      margin-top: 10px;
-    }
-
-    footer {
-      margin-top: 120px;
-      padding: 40px 20px;
-      border-top: 1px solid rgba(0,0,0,0.3);
-      background: rgba(255,245,210,0.9);
-      text-align: center;
-      font-size: 14px;
-      color: #6a4a12;
-    }
-  </style>
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:30px 0;
+  font-size:12px;
+  opacity:.4;
+  border-top:1px solid #222;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-inner">
-    <div class="logo">ZERO</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="manifesto.html" target="_blank" rel="noopener noreferrer">Manifesto</a>
-      <a href="#contract">Contract</a>
-      <a href="#community">Community</a>
-    </nav>
-  </div>
-</header>
+<!-- MENU -->
+<nav>
+<ul>
+  <li><a href="#hero">ZERO</a></li>
+  <li><a href="#community">Community</a></li>
+  <li><a href="manifesto.html">Manifesto</a></li>
+  <li><a href="whitepaper.html">Whitepaper</a></li>
+  <li><a href="info.html">Info</a></li>
+</ul>
+</nav>
 
-<main>
+<!-- HERO -->
+<section id="hero">
+<h1>ZERO</h1>
 
-  <h1>ZERO is not zero.</h1>
-  <p>Crypto can go to zero anytime.</p>
-  <p>From zero, we rebuild awareness.</p>
+<p>
+ZERO không hứa làm giàu.<br>
+ZERO chỉ tồn tại để nhắc rằng crypto có thể về zero.
+</p>
 
-  <div id="about" class="box">
-    <h2>What is ZERO?</h2>
-    <p>
-      ZERO is a symbolic crypto project.
-      It exists to remind participants of a simple truth:
-      crypto is impermanent.
-    </p>
-    <p>
-      ZERO does not promise profit.
-      ZERO does not guarantee growth.
-      ZERO is not an investment.
-    </p>
-  </div>
+<p>
+Không roadmap.<br>
+Không VC.<br>
+Không KOL.
+</p>
+</section>
 
-  <div class="box">
-    <h2>Why ZERO exists</h2>
-    <p>
-      As crypto becomes legalized, more people will enter the market.
-      Many will do so without understanding risk.
-    </p>
-    <p>
-      ZERO was created by someone who lost everything —
-      to remind others before they do.
-    </p>
-  </div>
+<!-- COMMUNITY -->
+<section id="community">
+<h2>COMMUNITY</h2>
 
-  <div id="contract" class="box">
-    <h2>Contract</h2>
-    <p class="contract">
-      0xa114fbc9c67e76666d4d5dca5c8fad27a525333e
-    </p>
-    <p>
-      <a href="https://bscscan.com/token/0xa114fbc9c67e76666d4d5dca5c8fad27a525333e" target="_blank">
-        View on BscScan
-      </a>
-    </p>
-  </div>
+<img id="communitySlide" src="images/zr03.PNG" alt="ZERO Community">
 
-  <div id="community" class="box">
-    <h2>Community</h2>
-    <p>
-      ZERO exists for a mindful community —
-      one that shares traps, exposes scams,
-      and reminds each other to stay aware.
-    </p>
+<p>
+ZERO không xây cộng đồng bằng lời hứa.
+</p>
 
-    <p>
-      <a href="https://www.tiktok.com/@zero_not_0" target="_blank">TikTok</a><br>
-      <a href="https://t.me/+zh7aảpD14kliODU1" target="_blank">Telegram</a><br>
-      <a href="https://x.com/zero_not_0" target="_blank">X (Twitter)</a>
-    </p>
-  </div>
-
-</main>
+<p>
+ZERO tồn tại cho những người đã từng về zero.
+</p>
+</section>
 
 <footer>
-  ZERO © 2026 — From Zero, We Begin Again<br>
-  No financial advice. Participation is voluntary.
+ZERO — back to zero.
 </footer>
+
+<!-- SLIDESHOW SCRIPT -->
+<script>
+const images = [
+  "images/zr03.PNG",
+  "images/zr04.PNG",
+  "images/zr05.PNG",
+  "images/zr06.PNG"
+];
+
+let i = 0;
+const img = document.getElementById("communitySlide");
+
+setInterval(()=>{
+  img.style.opacity = 0;
+  setTimeout(()=>{
+    i = (i + 1) % images.length;
+    img.src = images[i];
+    img.style.opacity = 1;
+  },800);
+},4000);
+</script>
 
 </body>
 </html>
