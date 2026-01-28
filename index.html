@@ -11,7 +11,7 @@
 html{scroll-behavior:smooth;}
 body{background:#000;color:#fff;position:relative;}
 
-/* ===== GRAIN BACKGROUND (KHÔNG CẦN ẢNH) ===== */
+/* ===== GRAIN BACKGROUND ===== */
 body::before{
   content:"";
   position:fixed;inset:0;
@@ -21,50 +21,102 @@ body::before{
 nav,section,footer{position:relative;z-index:1;}
 
 /* ===== MENU ===== */
-nav{position:fixed;top:0;width:100%;background:#000;border-bottom:1px solid #222;z-index:10;}
-nav ul{display:flex;justify-content:center;list-style:none;padding:14px 0;}
+nav{
+  position:fixed;
+  top:0;width:100%;
+  background:#000;
+  border-bottom:1px solid #222;
+  z-index:10;
+}
+nav ul{
+  display:flex;
+  justify-content:center;
+  list-style:none;
+  padding:14px 0;
+  flex-wrap:wrap;
+}
 nav ul li{margin:0 16px;}
-nav ul li a{color:#fff;text-decoration:none;font-size:13px;letter-spacing:1px;opacity:.7;}
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:1px;
+  opacity:.7;
+  transition:opacity .2s ease;
+}
 nav ul li a:hover{opacity:1;}
+
+/* ===== DISCLAIMER (MỜ HƠN) ===== */
+nav ul li a.disclaimer{
+  opacity:.45;
+  font-size:12px;
+}
+nav ul li a.disclaimer:hover{
+  opacity:1;
+}
 
 /* ===== LAYOUT ===== */
 section{
   min-height:100vh;
   padding:120px 20px 60px;
-  display:flex;justify-content:center;align-items:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-/* ===== BOX (KHUNG RÕ) ===== */
+/* ===== BOX ===== */
 .box{
-  background:rgba(0,0,0,0.55);          /* nền box tách lớp */
-  border:1px solid #333;                 /* viền rõ */
-  box-shadow:0 0 0 1px rgba(255,255,255,0.04); /* viền phụ nhẹ */
+  background:rgba(0,0,0,0.55);
+  border:1px solid #333;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.04);
   padding:56px 34px;
   max-width:720px;width:100%;
   text-align:center;
 }
 
 /* ===== TEXT ===== */
-h1,h2{font-weight:normal;letter-spacing:4px;margin-bottom:24px;}
-p{max-width:560px;margin:0 auto 18px;line-height:1.7;opacity:.85;font-size:15px;}
+h1,h2{
+  font-weight:normal;
+  letter-spacing:4px;
+  margin-bottom:24px;
+}
+p{
+  max-width:560px;
+  margin:0 auto 18px;
+  line-height:1.7;
+  opacity:.85;
+  font-size:15px;
+}
 #hero h1{font-size:54px;}
 
-/* ===== COMMUNITY LINKS ===== */
+/* ===== COMMUNITY ===== */
 #community a{
-  display:block;color:#fff;text-decoration:none;letter-spacing:1px;
-  opacity:.75;margin:14px 0;
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  letter-spacing:1px;
+  opacity:.75;
+  margin:14px 0;
 }
 #community a:hover{opacity:1;}
 
 /* ===== IFO IMAGE ===== */
 #ifo img{
-  max-width:320px;width:100%;
-  display:block;margin:32px auto;
+  max-width:320px;
+  width:100%;
+  display:block;
+  margin:32px auto;
   transition:opacity .8s ease;
 }
 
 /* ===== FOOTER ===== */
-footer{text-align:center;padding:30px 0;font-size:12px;opacity:.4;border-top:1px solid #222;}
+footer{
+  text-align:center;
+  padding:30px 0;
+  font-size:12px;
+  opacity:.4;
+  border-top:1px solid #222;
+}
 </style>
 </head>
 
@@ -78,6 +130,7 @@ footer{text-align:center;padding:30px 0;font-size:12px;opacity:.4;border-top:1px
   <li><a href="#ifo">IFO</a></li>
   <li><a href="manifesto.html">Manifesto</a></li>
   <li><a href="whitepaper.html">Whitepaper</a></li>
+  <li><a href="disclaimer.html" class="disclaimer">DISCLAIMER</a></li>
 </ul>
 </nav>
 
@@ -85,12 +138,19 @@ footer{text-align:center;padding:30px 0;font-size:12px;opacity:.4;border-top:1px
 <section id="hero">
   <div class="box">
     <h1>ZERO</h1>
-    <p>ZERO không hứa làm giàu.<br>ZERO chỉ tồn tại để nhắc rằng crypto có thể về zero.</p>
-    <p>Không roadmap.<br>Không VC.<br>Không KOL.</p>
+    <p>
+      ZERO không hứa làm giàu.<br>
+      ZERO chỉ tồn tại để nhắc rằng crypto có thể về zero.
+    </p>
+    <p>
+      Không roadmap.<br>
+      Không VC.<br>
+      Không KOL.
+    </p>
   </div>
 </section>
 
-<!-- ===== COMMUNITY (CHỈ LINK) ===== -->
+<!-- ===== COMMUNITY ===== -->
 <section id="community">
   <div class="box">
     <h2>COMMUNITY</h2>
@@ -101,21 +161,21 @@ footer{text-align:center;padding:30px 0;font-size:12px;opacity:.4;border-top:1px
   </div>
 </section>
 
-<!-- ===== IFO (ẢNH + SLIDESHOW) ===== -->
+<!-- ===== IFO ===== -->
 <section id="ifo">
   <div class="box">
     <h2>IFO</h2>
-
-    <!-- === NOTE: ĐỔI ẢNH Ở DÒNG DƯỚI (đúng tên file trong /images/) === -->
     <img id="ifoSlide" src="images/zr03.PNG" alt="ZERO IFO">
-
-    <p>ZERO không IFO để gọi vốn.<br>ZERO tồn tại trước cả khi có người mua.</p>
+    <p>
+      ZERO không IFO để gọi vốn.<br>
+      ZERO tồn tại trước cả khi có người mua.
+    </p>
   </div>
 </section>
 
 <footer>ZERO — back to zero.</footer>
 
-<!-- ===== SLIDESHOW (ĐỔI DANH SÁCH ẢNH Ở ĐÂY) ===== -->
+<!-- ===== SLIDESHOW ===== -->
 <script>
 const images=[
   "images/zr03.PNG",
@@ -123,7 +183,8 @@ const images=[
   "images/zr05.PNG",
   "images/zr06.PNG"
 ];
-let i=0;const img=document.getElementById("ifoSlide");
+let i=0;
+const img=document.getElementById("ifoSlide");
 setInterval(()=>{
   img.style.opacity=0;
   setTimeout(()=>{
