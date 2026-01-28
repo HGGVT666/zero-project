@@ -20,48 +20,50 @@ body::before{
 }
 nav,section,footer{position:relative;z-index:1;}
 
-/* ===== MENU ===== */
+/* ===== NAV DESKTOP ===== */
 nav{
-  position:fixed;
-  top:0;width:100%;
-  background:#000;
-  border-bottom:1px solid #222;
-  z-index:10;
+  position:fixed;top:0;width:100%;
+  background:#000;border-bottom:1px solid #222;z-index:10;
 }
-nav ul{
-  display:flex;
-  justify-content:center;
-  list-style:none;
-  padding:14px 0;
-  flex-wrap:wrap;
+.nav-inner{
+  max-width:1100px;margin:auto;
+  display:flex;justify-content:center;align-items:center;
+  padding:14px 16px;
 }
-nav ul li{margin:0 16px;}
-nav ul li a{
-  color:#fff;
-  text-decoration:none;
-  font-size:13px;
-  letter-spacing:1px;
-  opacity:.7;
-  transition:opacity .2s ease;
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{
+  color:#fff;text-decoration:none;font-size:13px;letter-spacing:1px;
+  opacity:.7;transition:opacity .2s ease;
 }
-nav ul li a:hover{opacity:1;}
+.nav-links a:hover{opacity:1;}
+.nav-links a.disclaimer{opacity:.45;font-size:12px;}
+.nav-links a.disclaimer:hover{opacity:1;}
 
-/* ===== DISCLAIMER (MỜ HƠN) ===== */
-nav ul li a.disclaimer{
-  opacity:.45;
-  font-size:12px;
+/* ===== HAMBURGER ===== */
+.hamburger{
+  display:none;cursor:pointer;font-size:22px;letter-spacing:2px;
 }
-nav ul li a.disclaimer:hover{
-  opacity:1;
+
+/* ===== MOBILE MENU OVERLAY ===== */
+.mobile-menu{
+  position:fixed;inset:0;background:#000;
+  display:none;flex-direction:column;
+  justify-content:center;align-items:center;
+  gap:22px;z-index:20;
 }
+.mobile-menu a{
+  color:#fff;text-decoration:none;
+  font-size:18px;letter-spacing:2px;opacity:.8;
+}
+.mobile-menu a:hover{opacity:1;}
+.mobile-menu a.disclaimer{opacity:.5;font-size:14px;}
+.close{position:absolute;top:18px;right:20px;font-size:22px;cursor:pointer;}
 
 /* ===== LAYOUT ===== */
 section{
   min-height:100vh;
   padding:120px 20px 60px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display:flex;justify-content:center;align-items:center;
 }
 
 /* ===== BOX ===== */
@@ -75,78 +77,72 @@ section{
 }
 
 /* ===== TEXT ===== */
-h1,h2{
-  font-weight:normal;
-  letter-spacing:4px;
-  margin-bottom:24px;
-}
-p{
-  max-width:560px;
-  margin:0 auto 18px;
-  line-height:1.7;
-  opacity:.85;
-  font-size:15px;
-}
+h1,h2{font-weight:normal;letter-spacing:4px;margin-bottom:24px;}
+p{max-width:560px;margin:0 auto 18px;line-height:1.7;opacity:.85;font-size:15px;}
 #hero h1{font-size:54px;}
 
 /* ===== COMMUNITY ===== */
 #community a{
-  display:block;
-  color:#fff;
-  text-decoration:none;
-  letter-spacing:1px;
-  opacity:.75;
-  margin:14px 0;
+  display:block;color:#fff;text-decoration:none;
+  letter-spacing:1px;opacity:.75;margin:14px 0;
 }
 #community a:hover{opacity:1;}
 
 /* ===== IFO IMAGE ===== */
 #ifo img{
-  max-width:320px;
-  width:100%;
-  display:block;
-  margin:32px auto;
+  max-width:320px;width:100%;
+  display:block;margin:32px auto;
   transition:opacity .8s ease;
 }
 
 /* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:30px 0;
-  font-size:12px;
-  opacity:.4;
-  border-top:1px solid #222;
+footer{text-align:center;padding:30px 0;font-size:12px;opacity:.4;border-top:1px solid #222;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:block;}
+  .nav-inner{justify-content:space-between;}
+  #hero h1{font-size:42px;}
+  section{padding:100px 16px 40px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== MENU ===== -->
+<!-- ===== NAV ===== -->
 <nav>
-<ul>
-  <li><a href="#hero">ZERO</a></li>
-  <li><a href="#community">Community</a></li>
-  <li><a href="#ifo">IFO</a></li>
-  <li><a href="manifesto.html">Manifesto</a></li>
-  <li><a href="whitepaper.html">Whitepaper</a></li>
-  <li><a href="disclaimer.html" class="disclaimer">DISCLAIMER</a></li>
-</ul>
+  <div class="nav-inner">
+    <div class="hamburger" onclick="openMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="#hero">ZERO</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#ifo">IFO</a></li>
+      <li><a href="manifesto.html">Manifesto</a></li>
+      <li><a href="whitepaper.html">Whitepaper</a></li>
+      <li><a href="disclaimer.html" class="disclaimer">DISCLAIMER</a></li>
+    </ul>
+  </div>
 </nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="close" onclick="closeMenu()">✕</div>
+  <a href="#hero" onclick="closeMenu()">ZERO</a>
+  <a href="#community" onclick="closeMenu()">Community</a>
+  <a href="#ifo" onclick="closeMenu()">IFO</a>
+  <a href="manifesto.html">Manifesto</a>
+  <a href="whitepaper.html">Whitepaper</a>
+  <a href="disclaimer.html" class="disclaimer">DISCLAIMER</a>
+</div>
 
 <!-- ===== HERO ===== -->
 <section id="hero">
   <div class="box">
     <h1>ZERO</h1>
-    <p>
-      ZERO không hứa làm giàu.<br>
-      ZERO chỉ tồn tại để nhắc rằng crypto có thể về zero.
-    </p>
-    <p>
-      Không roadmap.<br>
-      Không VC.<br>
-      Không KOL.
-    </p>
+    <p>ZERO không hứa làm giàu.<br>ZERO chỉ tồn tại để nhắc rằng crypto có thể về zero.</p>
+    <p>Không roadmap.<br>Không VC.<br>Không KOL.</p>
   </div>
 </section>
 
@@ -166,25 +162,18 @@ footer{
   <div class="box">
     <h2>IFO</h2>
     <img id="ifoSlide" src="images/zr03.PNG" alt="ZERO IFO">
-    <p>
-      ZERO không IFO để gọi vốn.<br>
-      ZERO tồn tại trước cả khi có người mua.
-    </p>
+    <p>ZERO không IFO để gọi vốn.<br>ZERO tồn tại trước cả khi có người mua.</p>
   </div>
 </section>
 
 <footer>ZERO — back to zero.</footer>
 
-<!-- ===== SLIDESHOW ===== -->
 <script>
-const images=[
-  "images/zr03.PNG",
-  "images/zr04.PNG",
-  "images/zr05.PNG",
-  "images/zr06.PNG"
-];
-let i=0;
-const img=document.getElementById("ifoSlide");
+function openMenu(){document.getElementById("mobileMenu").style.display="flex";}
+function closeMenu(){document.getElementById("mobileMenu").style.display="none";}
+
+const images=["images/zr03.PNG","images/zr04.PNG","images/zr05.PNG","images/zr06.PNG"];
+let i=0;const img=document.getElementById("ifoSlide");
 setInterval(()=>{
   img.style.opacity=0;
   setTimeout(()=>{
