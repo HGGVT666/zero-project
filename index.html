@@ -20,31 +20,47 @@ body::before{
 }
 nav,section,footer{position:relative;z-index:1;}
 
-/* ===== NAV DESKTOP ===== */
+/* ===== BACK BUTTON SYSTEM ===== */
+.back-btn{
+  position:fixed;
+  top:18px;
+  left:20px;
+  font-size:13px;
+  letter-spacing:1px;
+  color:#fff;
+  text-decoration:none;
+  opacity:0.5;
+  z-index:50;
+  transition:opacity .2s ease;
+}
+.back-btn:hover{opacity:1;}
+body.home .back-btn{display:none;} /* Ẩn ở index */
+
+/* ===== NAV ===== */
 nav{
   position:fixed;top:0;width:100%;
   background:#000;border-bottom:1px solid #222;z-index:10;
 }
 .nav-inner{
   max-width:1100px;margin:auto;
-  display:flex;justify-content:center;align-items:center;
+  display:flex;align-items:center;justify-content:space-between;
   padding:14px 16px;
 }
-.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links{
+  display:flex;gap:32px;list-style:none;
+}
 .nav-links a{
-  color:#fff;text-decoration:none;font-size:13px;letter-spacing:1px;
+  color:#fff;text-decoration:none;
+  font-size:13px;letter-spacing:1px;
   opacity:.7;transition:opacity .2s ease;
 }
 .nav-links a:hover{opacity:1;}
 .nav-links a.disclaimer{opacity:.45;font-size:12px;}
 .nav-links a.disclaimer:hover{opacity:1;}
 
-/* ===== HAMBURGER ===== */
-.hamburger{
-  display:none;cursor:pointer;font-size:22px;letter-spacing:2px;
-}
+.hamburger{display:none;font-size:22px;cursor:pointer;}
 
-/* ===== MOBILE MENU OVERLAY ===== */
+/* ===== MOBILE MENU ===== */
 .mobile-menu{
   position:fixed;inset:0;background:#000;
   display:none;flex-direction:column;
@@ -53,7 +69,8 @@ nav{
 }
 .mobile-menu a{
   color:#fff;text-decoration:none;
-  font-size:18px;letter-spacing:2px;opacity:.8;
+  font-size:18px;letter-spacing:2px;
+  opacity:.8;
 }
 .mobile-menu a:hover{opacity:1;}
 .mobile-menu a.disclaimer{opacity:.5;font-size:14px;}
@@ -102,16 +119,18 @@ footer{text-align:center;padding:30px 0;font-size:12px;opacity:.4;border-top:1px
 @media(max-width:768px){
   .nav-links{display:none;}
   .hamburger{display:block;}
-  .nav-inner{justify-content:space-between;}
   #hero h1{font-size:42px;}
   section{padding:100px 16px 40px;}
 }
 </style>
 </head>
 
-<body>
+<body class="home">
 
-<!-- ===== NAV ===== -->
+<!-- BACK BUTTON (HỆ THỐNG – TỰ ẨN Ở INDEX) -->
+<a href="index.html" class="back-btn">← MENU</a>
+
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <div class="hamburger" onclick="openMenu()">☰</div>
@@ -126,7 +145,7 @@ footer{text-align:center;padding:30px 0;font-size:12px;opacity:.4;border-top:1px
   </div>
 </nav>
 
-<!-- ===== MOBILE MENU ===== -->
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="close" onclick="closeMenu()">✕</div>
   <a href="#hero" onclick="closeMenu()">ZERO</a>
@@ -137,7 +156,7 @@ footer{text-align:center;padding:30px 0;font-size:12px;opacity:.4;border-top:1px
   <a href="disclaimer.html" class="disclaimer">DISCLAIMER</a>
 </div>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section id="hero">
   <div class="box">
     <h1>ZERO</h1>
@@ -146,7 +165,7 @@ footer{text-align:center;padding:30px 0;font-size:12px;opacity:.4;border-top:1px
   </div>
 </section>
 
-<!-- ===== COMMUNITY ===== -->
+<!-- COMMUNITY -->
 <section id="community">
   <div class="box">
     <h2>COMMUNITY</h2>
@@ -157,7 +176,7 @@ footer{text-align:center;padding:30px 0;font-size:12px;opacity:.4;border-top:1px
   </div>
 </section>
 
-<!-- ===== IFO ===== -->
+<!-- IFO -->
 <section id="ifo">
   <div class="box">
     <h2>IFO</h2>
