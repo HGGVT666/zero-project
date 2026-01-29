@@ -1,118 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZERO — Whitepaper</title>
-  <meta name="description" content="ZERO Whitepaper — A symbolic crypto project focused on awareness, risk, and responsibility.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZERO — Whitepaper</title>
+<meta name="description" content="ZERO Whitepaper — A symbolic crypto project focused on awareness, risk, and responsibility.">
 
-  <style>
-    /* ===== RESET ===== */
-    *{margin:0;padding:0;box-sizing:border-box;}
+<link rel="icon" href="assets/logo/favicon.png">
 
-    body{
-      font-family: Georgia, "Times New Roman", serif;
-      background:#ffffff;
-      color:#000000;
-      line-height:1.7;
-      position:relative;
-    }
+<style>
+/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
 
-    /* ===== BACK BUTTON ===== */
-    .back-btn{
-      position:fixed;
-      top:22px;
-      left:24px;
-      font-size:13px;
-      letter-spacing:1px;
-      color:#000;
-      text-decoration:none;
-      opacity:.6;
-      z-index:10;
-    }
-    .back-btn:hover{opacity:1;}
+body{
+  font-family: Georgia, "Times New Roman", serif;
+  background:#ffffff;
+  color:#000000;
+  line-height:1.7;
+  position:relative;
+}
 
-    /* ===== HEADER ===== */
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:28px 40px;
-      border-bottom:1px solid #000;
-      background:#fff;
-    }
+/* ===== BACK ===== */
+.back-btn{
+  position:fixed;
+  top:18px;left:20px;
+  font-size:12px;
+  letter-spacing:1px;
+  color:#000;
+  text-decoration:none;
+  opacity:.5;
+  z-index:30;
+}
+.back-btn:hover{opacity:1;}
 
-    header h1{
-      margin:0;
-      font-size:22px;
-      letter-spacing:1px;
-      font-weight:normal;
-    }
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 28px;
+  border-bottom:1px solid rgba(0,0,0,0.25);
+  background:#fff;
+  z-index:20;
+}
 
-    header h1 a{
-      text-decoration:none;
-      color:#000;
-    }
+header img{
+  height:18px;
+  opacity:.7;
+}
+header img:hover{opacity:1;}
 
-    nav a{
-      margin-left:24px;
-      text-decoration:none;
-      color:#999;
-      font-size:13px;
-      letter-spacing:1px;
-    }
+nav a{
+  margin-left:22px;
+  text-decoration:none;
+  color:#999;
+  font-size:12px;
+  letter-spacing:1px;
+}
+nav a:hover{color:#000;}
 
-    nav a:hover{color:#000;}
+/* ===== CONTENT ===== */
+main{
+  max-width:720px;
+  margin:140px auto 120px;
+  padding:0 20px;
+}
 
-    /* ===== CONTENT ===== */
-    main{
-      max-width:720px;
-      margin:100px auto 120px;
-      padding:0 20px;
-    }
+h2{
+  font-size:36px;
+  margin-top:60px;
+  margin-bottom:16px;
+  font-weight:normal;
+}
 
-    h2{
-      font-size:36px;
-      margin-top:60px;
-      margin-bottom:16px;
-      font-weight:normal;
-    }
+h3{
+  font-size:20px;
+  margin-top:36px;
+  margin-bottom:12px;
+  font-weight:normal;
+}
 
-    h3{
-      font-size:20px;
-      margin-top:36px;
-      margin-bottom:12px;
-      font-weight:normal;
-    }
+p{
+  font-size:18px;
+  margin:10px 0;
+}
 
-    p{
-      font-size:18px;
-      margin:10px 0;
-    }
+blockquote{
+  margin:26px 0;
+  padding-left:16px;
+  border-left:3px solid #000;
+  font-style:italic;
+}
 
-    blockquote{
-      margin:26px 0;
-      padding-left:16px;
-      border-left:3px solid #000;
-      font-style:italic;
-    }
-
-    /* ===== FOOTER ===== */
-    footer{
-      border-top:1px solid #000;
-      padding:32px 20px;
-      text-align:center;
-      font-size:13px;
-      color:#999;
-    }
-
-    footer a{
-      color:#999;
-      text-decoration:none;
-    }
-
-    footer a:hover{color:#000;}
-  </style>
+/* ===== FOOTER ===== */
+footer{
+  border-top:1px solid #000;
+  padding:32px 20px;
+  text-align:center;
+  font-size:13px;
+  color:#999;
+}
+footer a{
+  color:#999;
+  text-decoration:none;
+}
+footer a:hover{color:#000;}
+</style>
 </head>
 
 <body>
@@ -120,7 +115,9 @@
 <a href="index.html" class="back-btn">← MENU</a>
 
 <header>
-  <h1><a href="index.html">ZERO</a></h1>
+  <a href="index.html">
+    <img src="assets/logo/zero-light.svg" alt="ZERO">
+  </a>
   <nav>
     <a href="whitepaper.html" style="color:#000;">Whitepaper</a>
     <a href="manifesto.html">Manifesto</a>
@@ -130,92 +127,92 @@
 
 <main>
 
-  <h2>ZERO Whitepaper</h2>
-  <p><strong>Version 1.0 — 2026</strong></p>
+<h2>ZERO Whitepaper</h2>
+<p><strong>Version 1.0 — 2026</strong></p>
 
-  <h3>1. Introduction</h3>
-  <p>
-    Crypto was born from trustless systems, yet trust is what the market keeps losing.
-    Scams, rugs, false promises, and endless cycles of disappointment.
-  </p>
+<h3>1. Introduction</h3>
+<p>
+  Crypto was born from trustless systems, yet trust is what the market keeps losing.
+  Scams, rugs, false promises, and endless cycles of disappointment.
+</p>
 
-  <blockquote>
-    Crypto can go to zero anytime.<br>
-    From zero, we rebuild trust.
-  </blockquote>
+<blockquote>
+  Crypto can go to zero anytime.<br>
+  From zero, we rebuild trust.
+</blockquote>
 
-  <h3>2. What is ZERO?</h3>
-  <p>
-    ZERO is a symbolic crypto project. It does not promise wealth.
-    It does not guarantee returns. It does not sell dreams.
-  </p>
+<h3>2. What is ZERO?</h3>
+<p>
+  ZERO is a symbolic crypto project. It does not promise wealth.
+  It does not guarantee returns. It does not sell dreams.
+</p>
 
-  <p>
-    ZERO exists as a reminder of risk, a reset of mindset,
-    and a community experiment built on honesty.
-  </p>
+<p>
+  ZERO exists as a reminder of risk, a reset of mindset,
+  and a community experiment built on honesty.
+</p>
 
-  <h3>3. Philosophy</h3>
-  <p>
-    Most projects start by selling optimism. ZERO starts by admitting uncertainty.
-  </p>
+<h3>3. Philosophy</h3>
+<p>
+  Most projects start by selling optimism. ZERO starts by admitting uncertainty.
+</p>
 
-  <p>
-    We believe risk should be acknowledged, not hidden.
-    Participation should be voluntary, not pressured.
-  </p>
+<p>
+  We believe risk should be acknowledged, not hidden.
+  Participation should be voluntary, not pressured.
+</p>
 
-  <h3>4. Why ZERO Exists</h3>
-  <p>
-    People don’t lose money because they don’t understand crypto.
-    They lose money because they ignore risk.
-  </p>
+<h3>4. Why ZERO Exists</h3>
+<p>
+  People don’t lose money because they don’t understand crypto.
+  They lose money because they ignore risk.
+</p>
 
-  <p>
-    ZERO was created after loss, not before profit.
-  </p>
+<p>
+  ZERO was created after loss, not before profit.
+</p>
 
-  <h3>5. Token Overview</h3>
-  <p>
-    ZERO is a simple token with no complex mechanics,
-    no artificial narratives, and no guaranteed roadmap.
-  </p>
+<h3>5. Token Overview</h3>
+<p>
+  ZERO is a simple token with no complex mechanics,
+  no artificial narratives, and no guaranteed roadmap.
+</p>
 
-  <p>
-    Holding ZERO represents awareness, not entitlement.
-  </p>
+<p>
+  Holding ZERO represents awareness, not entitlement.
+</p>
 
-  <h3>6. Community Principles</h3>
-  <p>
-    ZERO values transparency over marketing,
-    education over excitement,
-    and responsibility over hype.
-  </p>
+<h3>6. Community Principles</h3>
+<p>
+  ZERO values transparency over marketing,
+  education over excitement,
+  and responsibility over hype.
+</p>
 
-  <h3>7. What ZERO Is Not</h3>
-  <p>
-    ZERO is not a financial product,
-    not an investment guarantee,
-    and not a get-rich-quick scheme.
-  </p>
+<h3>7. What ZERO Is Not</h3>
+<p>
+  ZERO is not a financial product,
+  not an investment guarantee,
+  and not a get-rich-quick scheme.
+</p>
 
-  <h3>8. Responsibility Disclaimer</h3>
-  <p>
-    Participation in ZERO is entirely voluntary.
-    Crypto assets are volatile, and total loss is possible.
-  </p>
+<h3>8. Responsibility Disclaimer</h3>
+<p>
+  Participation in ZERO is entirely voluntary.
+  Crypto assets are volatile, and total loss is possible.
+</p>
 
-  <h3>9. Vision</h3>
-  <p>
-    If people enter crypto knowing it can go to zero,
-    fewer will be surprised when it does.
-  </p>
+<h3>9. Vision</h3>
+<p>
+  If people enter crypto knowing it can go to zero,
+  fewer will be surprised when it does.
+</p>
 
-  <h3>10. Closing</h3>
-  <blockquote>
-    ZERO does not ask you to trust it.<br>
-    ZERO asks you to trust yourself.
-  </blockquote>
+<h3>10. Closing</h3>
+<blockquote>
+  ZERO does not ask you to trust it.<br>
+  ZERO asks you to trust yourself.
+</blockquote>
 
 </main>
 
