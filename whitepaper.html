@@ -1,102 +1,130 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZERO — Whitepaper</title>
+  <meta name="description" content="ZERO Whitepaper — A symbolic crypto project focused on awareness, risk, and responsibility.">
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
+    /* ===== RESET ===== */
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
       font-family: Georgia, "Times New Roman", serif;
-      background: #ffffff;
-      color: #000000;
+      background:#ffffff;
+      color:#000000;
+      line-height:1.7;
+      position:relative;
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 40px;
-      border-bottom: 1px solid #000;
+    /* ===== BACK BUTTON ===== */
+    .back-btn{
+      position:fixed;
+      top:22px;
+      left:24px;
+      font-size:13px;
+      letter-spacing:1px;
+      color:#000;
+      text-decoration:none;
+      opacity:.6;
+      z-index:10;
+    }
+    .back-btn:hover{opacity:1;}
+
+    /* ===== HEADER ===== */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:28px 40px;
+      border-bottom:1px solid #000;
+      background:#fff;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 22px;
-      letter-spacing: 1px;
+    header h1{
+      margin:0;
+      font-size:22px;
+      letter-spacing:1px;
+      font-weight:normal;
     }
 
-    nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #999;
-      font-size: 14px;
+    header h1 a{
+      text-decoration:none;
+      color:#000;
     }
 
-    nav a:hover {
-      color: #000;
+    nav a{
+      margin-left:24px;
+      text-decoration:none;
+      color:#999;
+      font-size:13px;
+      letter-spacing:1px;
     }
 
-    main {
-      max-width: 720px;
-      margin: 80px auto;
-      padding: 0 20px;
+    nav a:hover{color:#000;}
+
+    /* ===== CONTENT ===== */
+    main{
+      max-width:720px;
+      margin:100px auto 120px;
+      padding:0 20px;
     }
 
-    h2 {
-      font-size: 36px;
-      margin-top: 60px;
-      margin-bottom: 16px;
+    h2{
+      font-size:36px;
+      margin-top:60px;
+      margin-bottom:16px;
+      font-weight:normal;
     }
 
-    h3 {
-      font-size: 20px;
-      margin-top: 32px;
-      margin-bottom: 12px;
+    h3{
+      font-size:20px;
+      margin-top:36px;
+      margin-bottom:12px;
+      font-weight:normal;
     }
 
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin: 10px 0;
+    p{
+      font-size:18px;
+      margin:10px 0;
     }
 
-    blockquote {
-      margin: 24px 0;
-      padding-left: 16px;
-      border-left: 3px solid #000;
-      font-style: italic;
+    blockquote{
+      margin:26px 0;
+      padding-left:16px;
+      border-left:3px solid #000;
+      font-style:italic;
     }
 
-    footer {
-      border-top: 1px solid #000;
-      padding: 24px 20px;
-      text-align: center;
-      font-size: 13px;
-      color: #999;
+    /* ===== FOOTER ===== */
+    footer{
+      border-top:1px solid #000;
+      padding:32px 20px;
+      text-align:center;
+      font-size:13px;
+      color:#999;
     }
 
-    footer a {
-      color: #999;
-      text-decoration: none;
+    footer a{
+      color:#999;
+      text-decoration:none;
     }
 
-    footer a:hover {
-      color: #000;
-    }
+    footer a:hover{color:#000;}
   </style>
 </head>
 
 <body>
 
+<a href="index.html" class="back-btn">← MENU</a>
+
 <header>
-  <h1><a href="index.html" style="text-decoration:none;color:#000;">ZERO</a></h1>
+  <h1><a href="index.html">ZERO</a></h1>
   <nav>
     <a href="whitepaper.html" style="color:#000;">Whitepaper</a>
-    <a href="#">Info</a>
-    <a href="#">Community</a>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="disclaimer.html">Disclaimer</a>
   </nav>
 </header>
 
