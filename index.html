@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="ZERO không hứa làm giàu. ZERO tồn tại để nhắc rằng crypto có thể về zero.">
 
+<link rel="icon" href="assets/logo/favicon.png">
+
 <style>
 /* ===== RESET ===== */
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -17,22 +19,19 @@ body{
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* ===== GRAIN BACKGROUND ===== */
+/* ===== GRAIN ===== */
 body::before{
   content:"";
-  position:fixed;
-  inset:0;
+  position:fixed;inset:0;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events:none;
-  z-index:0;
+  pointer-events:none;z-index:0;
 }
 nav,section,footer{position:relative;z-index:1;}
 
-/* ===== TOP NAV (DESKTOP) ===== */
+/* ===== NAV ===== */
 nav{
   position:fixed;
-  top:0;
-  width:100%;
+  top:0;width:100%;
   background:#000;
   border-bottom:1px solid #222;
   z-index:10;
@@ -40,10 +39,16 @@ nav{
 .nav-inner{
   max-width:1100px;
   margin:auto;
-  padding:16px;
+  padding:16px 20px;
   display:flex;
-  justify-content:center;
+  align-items:center;
+  justify-content:space-between;
 }
+.logo img{
+  height:20px;
+  display:block;
+}
+
 .nav-links{
   display:flex;
   list-style:none;
@@ -62,11 +67,8 @@ nav{
   font-size:11px;
 }
 
-/* ===== HAMBURGER (MOBILE) ===== */
+/* ===== HAMBURGER ===== */
 .hamburger{
-  position:absolute;
-  left:16px;
-  top:14px;
   font-size:22px;
   cursor:pointer;
   display:none;
@@ -74,8 +76,7 @@ nav{
 
 /* ===== MOBILE MENU ===== */
 .mobile-menu{
-  position:fixed;
-  inset:0;
+  position:fixed;inset:0;
   background:#000;
   display:none;
   flex-direction:column;
@@ -93,11 +94,8 @@ nav{
 }
 .mobile-menu a.disclaimer{opacity:.5;font-size:14px;}
 .close{
-  position:absolute;
-  top:18px;
-  right:20px;
-  font-size:22px;
-  cursor:pointer;
+  position:absolute;top:18px;right:20px;
+  font-size:22px;cursor:pointer;
 }
 
 /* ===== LAYOUT ===== */
@@ -115,8 +113,7 @@ section{
   border:1px solid #333;
   box-shadow:0 0 0 1px rgba(255,255,255,0.04);
   padding:56px 34px;
-  max-width:720px;
-  width:100%;
+  max-width:720px;width:100%;
   text-align:center;
 }
 
@@ -137,21 +134,15 @@ p{
 
 /* ===== COMMUNITY ===== */
 #community a{
-  display:block;
-  color:#fff;
-  text-decoration:none;
-  letter-spacing:1px;
-  opacity:.75;
-  margin:14px 0;
+  display:block;color:#fff;text-decoration:none;
+  letter-spacing:1px;opacity:.75;margin:14px 0;
 }
 #community a:hover{opacity:1;}
 
 /* ===== IFO IMAGE ===== */
 #ifo img{
-  max-width:320px;
-  width:100%;
-  display:block;
-  margin:32px auto;
+  max-width:320px;width:100%;
+  display:block;margin:32px auto;
   transition:opacity .8s ease;
 }
 
@@ -168,7 +159,6 @@ footer{
 @media(max-width:768px){
   .nav-links{display:none;}
   .hamburger{display:block;}
-  .nav-inner{justify-content:flex-start;}
   section{padding:120px 16px 40px;}
   #hero h1{font-size:40px;}
 }
@@ -177,10 +167,14 @@ footer{
 
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/logo/zero-dark.svg" alt="ZERO">
+    </a>
+
     <div class="hamburger" onclick="openMenu()">☰</div>
+
     <ul class="nav-links">
       <li><a href="#hero">ZERO</a></li>
       <li><a href="#community">Community</a></li>
@@ -192,7 +186,6 @@ footer{
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="close" onclick="closeMenu()">✕</div>
   <a href="#hero" onclick="closeMenu()">ZERO</a>
@@ -203,23 +196,14 @@ footer{
   <a href="disclaimer.html" class="disclaimer">DISCLAIMER</a>
 </div>
 
-<!-- HERO -->
 <section id="hero">
   <div class="box">
     <h1>ZERO</h1>
-    <p>
-      ZERO không hứa làm giàu.<br>
-      ZERO chỉ tồn tại để nhắc rằng crypto có thể về zero.
-    </p>
-    <p>
-      Không roadmap.<br>
-      Không VC.<br>
-      Không KOL.
-    </p>
+    <p>ZERO không hứa làm giàu.<br>ZERO chỉ tồn tại để nhắc rằng crypto có thể về zero.</p>
+    <p>Không roadmap.<br>Không VC.<br>Không KOL.</p>
   </div>
 </section>
 
-<!-- COMMUNITY -->
 <section id="community">
   <div class="box">
     <h2>COMMUNITY</h2>
@@ -230,15 +214,11 @@ footer{
   </div>
 </section>
 
-<!-- IFO -->
 <section id="ifo">
   <div class="box">
     <h2>IFO</h2>
     <img id="ifoSlide" src="images/zr03.PNG" alt="ZERO IFO">
-    <p>
-      ZERO không IFO để gọi vốn.<br>
-      ZERO tồn tại trước cả khi có người mua.
-    </p>
+    <p>ZERO không IFO để gọi vốn.<br>ZERO tồn tại trước cả khi có người mua.</p>
   </div>
 </section>
 
