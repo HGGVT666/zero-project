@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZERO Academy</title>
+
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #ffffff;
+      color: #111;
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 22px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    li {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .links {
+      margin-top: 60px;
+      font-size: 16px;
+    }
+
+    .links a {
+      display: block;
+      margin-bottom: 8px;
+      color: #111;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>ZERO</h1>
+
+    <p>
+      ZERO không phải dự án.<br />
+      ZERO không kêu gọi mua.<br />
+      ZERO không dạy bạn thắng trong crypto.
+    </p>
+
+    <p>
+      ZERO tồn tại như một academy tỉnh thức,<br />
+      dành cho những người đã từng tin quá nhiều,<br />
+      vào quá vội,<br />
+      và trả giá cho sự thiếu hiểu biết của chính mình.
+    </p>
+
+    <p>
+      ZERO không cản bạn chơi crypto.<br />
+      ZERO chỉ giúp bạn không tự lừa mình khi chơi.
+    </p>
+
+    <p>Ở đây không có:</p>
+    <ul>
+      <li>lời hứa lợi nhuận</li>
+      <li>chỉ dẫn giao dịch</li>
+      <li>người dẫn đường</li>
+    </ul>
+
+    <p>Chỉ có:</p>
+    <ul>
+      <li>những bài học sau khi đã mất</li>
+      <li>những câu hỏi trước khi hành động</li>
+      <li>những lời thú nhận khi không còn muốn khoe chiến thắng</li>
+    </ul>
+
+    <p>
+      Nếu bạn đang tìm một cơ hội,<br />
+      bạn có thể rời đi ngay.
+    </p>
+
+    <p>
+      Nếu bạn từng về ZERO,<br />
+      có lẽ bạn sẽ hiểu vì sao nơi này tồn tại.
+    </p>
+
+    <div class="links">
+      <a href="/bai-hoc-zero.html">Bài học ZERO</a>
+      <a href="/cau-hoi-zero.html">Câu hỏi ZERO</a>
+      <a href="/confession-zero.html">Confession ZERO</a>
+    </div>
+
+    <footer>
+      <div>ZERO Academy</div>
+      <div>zerocanon.xyz</div>
+      <div>Không phải lời khuyên đầu tư. Không phải lối thoát.</div>
+    </footer>
+
+  </div>
+</body>
+</html>
