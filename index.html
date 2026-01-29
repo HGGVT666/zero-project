@@ -41,27 +41,35 @@
       margin-bottom: 10px;
     }
 
-    .links {
-      margin-top: 60px;
-      font-size: 16px;
-    }
-
-    .links a {
-      display: block;
-      margin-bottom: 8px;
-      color: #111;
-      text-decoration: none;
-    }
-
-    footer {
+    /* FOOTER CHUNG ZERO */
+    .zero-footer {
       margin-top: 80px;
       font-size: 13px;
       color: #777;
     }
 
-    a {
+    .zero-footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 18px;
+      opacity: 0.75;
+    }
+
+    .zero-footer-nav a {
       color: inherit;
       text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .zero-footer-nav a:hover {
+      opacity: 1;
+    }
+
+    .zero-footer-nav a:not(:last-child)::after {
+      content: " /";
+      margin-left: 2px;
+      opacity: 0.4;
     }
   </style>
 </head>
@@ -113,20 +121,14 @@
       có lẽ bạn sẽ hiểu vì sao nơi này tồn tại.
     </p>
 
-    <div class="links">
-      <a href="/bai-hoc-zero.html">Bài học ZERO</a>
-      <a href="/cau-hoi-zero.html">Câu hỏi ZERO</a>
-      <a href="/confession-zero.html">Confession ZERO</a>
-    </div>
-
-    <footer>
-      <div>ZERO Academy</div>
-      <div>zerocanon.xyz</div>
-      <div>Không phải lời khuyên đầu tư. Không phải lối thoát.</div>
-      <footer>
-  <div>ZERO Academy</div>
-  <div><a href="/">← quay về zerocanon.xyz</a></div>
-</footer>
+    <footer class="zero-footer">
+      <nav class="zero-footer-nav">
+        <a href="/">ZERO</a>
+        <a href="/bai-hoc-zero.html">Bài học ZERO</a>
+        <a href="/cau-hoi-zero.html">Câu hỏi ZERO</a>
+        <a href="/confession-zero.html">Confession ZERO</a>
+      </nav>
+      <div>ZERO Academy · zerocanon.xyz</div>
     </footer>
 
   </div>
