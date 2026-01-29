@@ -4,45 +4,95 @@
 <meta charset="UTF-8">
 <title>ZERO — Disclaimer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ZERO Disclaimer — ZERO is not an investment. ZERO makes no promises.">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
-body{background:#000;color:#fff;line-height:1.7;padding:80px 20px;}
+/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:#000;
+  color:#fff;
+  line-height:1.7;
+  position:relative;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ===== GRAIN BACKGROUND ===== */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ===== BACK BUTTON ===== */
 .back-btn{
-  position:fixed;top:18px;left:20px;
-  font-size:13px;letter-spacing:1px;
-  color:#fff;text-decoration:none;
-  opacity:.5;transition:.2s;
+  position:fixed;
+  top:18px;
+  left:20px;
+  font-size:12px;
+  letter-spacing:1px;
+  color:#fff;
+  text-decoration:none;
+  opacity:.45;
+  z-index:10;
 }
 .back-btn:hover{opacity:1;}
-.wrap{max-width:720px;margin:auto;}
-h1{letter-spacing:4px;margin-bottom:32px;font-weight:normal;}
-p{opacity:.85;margin-bottom:20px;}
-hr{border:none;border-top:1px solid #222;margin:40px 0;}
+
+/* ===== LAYOUT ===== */
+.wrap{
+  max-width:720px;
+  margin:120px auto 80px;
+  padding:0 20px;
+  position:relative;
+  z-index:1;
+}
+
+/* ===== TEXT ===== */
+h1{
+  letter-spacing:4px;
+  margin-bottom:42px;
+  font-weight:normal;
+}
+p{
+  opacity:.85;
+  margin-bottom:24px;
+  font-size:15px;
+}
+hr{
+  border:none;
+  border-top:1px solid #222;
+  margin:48px 0;
+}
+strong{font-weight:normal;letter-spacing:.5px;}
 </style>
 </head>
 
 <body>
+
 <a href="index.html" class="back-btn">← MENU</a>
 
 <div class="wrap">
-<h1>DISCLAIMER</h1>
+  <h1>DISCLAIMER</h1>
 
-<p><strong>ZERO is not an investment.</strong><br>
-ZERO exists as a reminder that anything can return to zero.<br>
-There is no promise, no roadmap, and no expectation of profit.</p>
+  <p><strong>ZERO is not an investment.</strong><br>
+  ZERO exists as a reminder that anything can return to zero.<br>
+  There is no promise, no roadmap, and no expectation of profit.</p>
 
-<p>Any interaction with ZERO is a personal decision.<br>
-ZERO remains. Nothing more is required.</p>
+  <p>Any interaction with ZERO is a personal decision.<br>
+  ZERO remains. Nothing more is required.</p>
 
-<hr>
+  <hr>
 
-<p><strong>ZERO không phải là một khoản đầu tư.</strong><br>
-ZERO tồn tại như một lời nhắc rằng mọi thứ đều có thể quay về zero.<br>
-Không cam kết, không lộ trình, không hứa hẹn lợi nhuận.</p>
+  <p><strong>ZERO không phải là một khoản đầu tư.</strong><br>
+  ZERO tồn tại như một lời nhắc rằng mọi thứ đều có thể quay về zero.<br>
+  Không cam kết, không lộ trình, không hứa hẹn lợi nhuận.</p>
 
-<p>Mọi tương tác đều là lựa chọn cá nhân.<br>
-ZERO ở đó. Thế là đủ.</p>
+  <p>Mọi tương tác đều là lựa chọn cá nhân.<br>
+  ZERO ở đó. Thế là đủ.</p>
 </div>
+
 </body>
 </html>
