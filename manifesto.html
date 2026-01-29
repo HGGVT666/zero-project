@@ -1,218 +1,92 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ZERO Manifesto</title>
+<meta charset="UTF-8">
+<title>ZERO — Manifesto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ZERO Manifesto — ZERO không dẫn đường. ZERO chỉ đặt một điểm dừng.">
 
-  <style>
-    body {
-      margin: 0;
-      background: #0b0b12;
-      color: #e8e6df;
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.8;
-    }
+<style>
+/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:#000;
+  color:#fff;
+  line-height:1.8;
+  position:relative;
+  font-family: Georgia, "Times New Roman", serif;
+}
 
-    /* ===== TOP BAR ===== */
-    .top-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 16px;
-      background: rgba(11,11,18,0.9);
-      backdrop-filter: blur(6px);
-      z-index: 1000;
-    }
+/* ===== GRAIN BACKGROUND ===== */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:0;
+}
 
-    .top-bar button {
-      background: none;
-      border: none;
-      color: #e8e6df;
-      font-size: 14px;
-      letter-spacing: 1px;
-      cursor: pointer;
-      opacity: 0.85;
-    }
+/* ===== BACK BUTTON ===== */
+.back-btn{
+  position:fixed;
+  top:18px;
+  left:20px;
+  font-size:12px;
+  letter-spacing:1px;
+  color:#fff;
+  text-decoration:none;
+  opacity:.45;
+  z-index:10;
+}
+.back-btn:hover{opacity:1;}
 
-    .top-bar button:hover {
-      opacity: 1;
-    }
+/* ===== LAYOUT ===== */
+.wrap{
+  max-width:720px;
+  margin:120px auto 80px;
+  padding:0 20px;
+  position:relative;
+  z-index:1;
+}
 
-    /* ===== CONTENT ===== */
-    .container {
-      max-width: 720px;
-      margin: auto;
-      padding: 120px 20px 100px;
-    }
-
-    section {
-      margin-bottom: 90px;
-    }
-
-    h1 {
-      letter-spacing: 3px;
-      margin-bottom: 80px;
-    }
-
-    h2 {
-      letter-spacing: 2px;
-      margin-bottom: 30px;
-    }
-
-    p {
-      margin: 0 0 14px 0;
-    }
-
-    ul {
-      padding-left: 18px;
-      margin: 10px 0 0;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .highlight {
-      margin-top: 30px;
-      font-weight: bold;
-    }
-
-    .divider {
-      height: 1px;
-      background: rgba(255,255,255,0.1);
-      margin: 80px 0;
-    }
-  </style>
+/* ===== TEXT ===== */
+h1{
+  letter-spacing:4px;
+  margin-bottom:42px;
+  font-weight:normal;
+}
+p{
+  opacity:.85;
+  margin-bottom:26px;
+  font-size:15px;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <button onclick="history.back()">← BACK</button>
-    <button onclick="location.href='index.html'">MENU</button>
-  </div>
+<a href="index.html" class="back-btn">← MENU</a>
 
-  <!-- CONTENT -->
-  <div class="container">
+<div class="wrap">
+  <h1>MANIFESTO</h1>
 
-    <h1>ZERO MANIFESTO</h1>
+  <p>ZERO sinh ra từ sự im lặng.</p>
 
-    <!-- ZERO IS NOT A PROMISE -->
-    <section>
-      <h2>ZERO IS NOT A PROMISE</h2>
+  <p>Không phải để làm giàu.<br>
+  Không phải để thuyết phục.</p>
 
-      <p>ZERO không hứa lợi nhuận.</p>
-      <p>ZERO không hứa tăng trưởng.</p>
-      <p>ZERO không hứa an toàn.</p>
+  <p>ZERO tồn tại để nhắc rằng:<br>
+  bất kỳ ai cũng có thể quay về zero.</p>
 
-      <br>
+  <p>Khi bạn dừng lại,<br>
+  bạn còn lựa chọn.</p>
 
-      <p>Trong crypto,</p>
-      <p>lời hứa là con đường nhanh nhất để mất niềm tin.</p>
+  <p>ZERO không dẫn đường.<br>
+  ZERO chỉ đặt một điểm dừng.</p>
 
-      <br>
-
-      <p class="highlight">ZERO chọn im lặng thay vì hứa hẹn.</p>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ZERO IS A REMINDER -->
-    <section>
-      <h2>ZERO IS A REMINDER</h2>
-
-      <p>Mỗi chu kỳ đều tạo ra ảo tưởng.</p>
-      <p>Mỗi ảo tưởng đều kết thúc giống nhau.</p>
-      <p>Trở về ZERO.</p>
-
-      <br>
-
-      <p>ZERO nhắc bạn:</p>
-      <ul>
-        <li>quản trị rủi ro</li>
-        <li>tôn trọng sự bất định</li>
-        <li>không bao giờ quên mọi thứ sụp đổ nhanh thế nào</li>
-      </ul>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ZERO IS NOT CONTROL -->
-    <section>
-      <h2>ZERO IS NOT CONTROL</h2>
-
-      <p>Không có bàn tay ẩn.</p>
-      <p>Không có bảo vệ giá.</p>
-      <p>Không có kết quả được đảm bảo.</p>
-
-      <br>
-
-      <p>Vốn có thể vào.</p>
-      <p>Kiểm soát thì không.</p>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ZERO IS DISCIPLINE -->
-    <section>
-      <h2>ZERO IS DISCIPLINE</h2>
-
-      <p>Kỷ luật trước cảm xúc.</p>
-      <p>Nguyên tắc trước cơn hype.</p>
-      <p>Hiểu biết trước lòng tham.</p>
-
-      <br>
-
-      <p>Nếu bạn mất kỷ luật,</p>
-      <p class="highlight">mọi thứ sẽ quay về ZERO.</p>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ZERO IS COMMUNITY -->
-    <section>
-      <h2>ZERO IS COMMUNITY, NOT FOLLOWERS</h2>
-
-      <p>ZERO không tuyển tín đồ.</p>
-      <p>ZERO thu hút những người đã hiểu.</p>
-
-      <ul>
-        <li>Không ai bị ép mua</li>
-        <li>Không ai bị ép thêm thanh khoản</li>
-        <li>Không ai được hứa hẹn điều gì</li>
-      </ul>
-
-      <br>
-
-      <p>Sự tham gia là tự nguyện.</p>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- WHAT ZERO IS -->
-    <section>
-      <h2>WHAT ZERO IS</h2>
-
-      <p>ZERO không phải luận điểm đầu tư.</p>
-      <p>ZERO không phải roadmap.</p>
-      <p>ZERO không phải dự đoán.</p>
-
-      <br>
-
-      <p>ZERO là lời nhắc.</p>
-      <p>Nhắc rằng thị trường luôn reset.</p>
-      <p>Nhắc rằng chu kỳ luôn lặp lại.</p>
-      <p>Nhắc rằng mọi thứ đều có thể về zero.</p>
-    </section>
-
-  </div>
+  <p>Phần còn lại là của bạn.</p>
+</div>
 
 </body>
 </html>
