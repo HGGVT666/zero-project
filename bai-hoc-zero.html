@@ -1,133 +1,139 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bài học ZERO</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bài học ZERO</title>
 
-  <style>
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      background: #ffffff;
-      color: #111;
-      margin: 0;
-      padding: 40px 20px;
-      line-height: 1.7;
-    }
+<style>
+body{
+  font-family: Georgia,"Times New Roman",serif;
+  background:#fff;color:#111;
+  margin:0;padding:40px 20px;line-height:1.8}
+.container{max-width:720px;margin:0 auto}
+h1{font-size:32px;font-weight:normal;margin-bottom:40px}
+h2{font-size:20px;font-weight:normal;margin:60px 0 20px}
+p{font-size:18px;margin-bottom:24px}
 
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-    }
+.lesson{
+  margin-bottom:48px;
+}
+.lesson span{
+  display:block;
+  font-size:13px;
+  letter-spacing:1px;
+  color:#777;
+  margin-bottom:10px;
+}
 
-    h1 {
-      font-size: 28px;
-      font-weight: normal;
-      margin-bottom: 40px;
-    }
+.zero-footer-nav{
+  display:flex;flex-wrap:wrap;gap:14px;
+  margin-top:80px;font-size:14px;opacity:.7}
+.zero-footer-nav a{text-decoration:none;color:inherit}
+.zero-footer-nav a:not(:last-child)::after{
+  content:" /";opacity:.4;margin-left:2px}
 
-    .lesson {
-      margin-bottom: 48px;
-    }
-
-    .lesson-number {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 6px;
-    }
-
-    .lesson-text {
-      font-size: 18px;
-    }
-
-    /* FOOTER CHUNG ZERO */
-    .zero-footer {
-      margin-top: 80px;
-      font-size: 13px;
-      color: #777;
-    }
-
-    .zero-footer-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 18px;
-      opacity: 0.75;
-    }
-
-    .zero-footer-nav a {
-      color: inherit;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .zero-footer-nav a:hover {
-      opacity: 1;
-    }
-
-    .zero-footer-nav a:not(:last-child)::after {
-      content: " /";
-      margin-left: 2px;
-      opacity: 0.4;
-    }
-  </style>
+.zero-ifo{
+  margin-top:80px;padding-top:30px;
+  border-top:1px solid #e5e5e5;font-size:14px;color:#444}
+.ifo-row{display:flex;gap:12px;margin-bottom:10px}
+.ifo-label{min-width:80px;color:#777}
+.ifo-contract{font-family:monospace;font-size:13px;word-break:break-all}
+.ifo-copy{border:none;background:none;font-size:12px;cursor:pointer;color:#777}
+.ifo-note{margin-top:20px;font-size:12px;color:#888}
+</style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <h1>BÀI HỌC ZERO</h1>
+<h1>Bài học ZERO</h1>
 
-    <div class="lesson">
-      <div class="lesson-number">Bài học ZERO #01</div>
-      <div class="lesson-text">
-        Tôi không thua vì thị trường.<br />
-        Tôi thua vì tôi nghĩ mình vào sớm hơn người khác.
-      </div>
-    </div>
+<p>
+Đây không phải kiến thức để làm giàu.<br>
+Đây là những điều thường chỉ hiểu ra<br>
+sau khi đã mất.
+</p>
 
-    <div class="lesson">
-      <div class="lesson-number">Bài học ZERO #02</div>
-      <div class="lesson-text">
-        Lệnh khiến tôi mất nhiều nhất<br />
-        là lệnh tôi tin rằng “lần này khác”.
-      </div>
-    </div>
+<!-- ===== 40 BÀI HỌC ===== -->
 
-    <div class="lesson">
-      <div class="lesson-number">Bài học ZERO #03</div>
-      <div class="lesson-text">
-        Khi tôi cần người khác xác nhận quyết định của mình,<br />
-        tôi đã không còn kiểm soát nó.
-      </div>
-    </div>
+<div class="lesson"><span>BÀI HỌC #01</span><p>ZERO không giúp bạn kiếm tiền.<br>ZERO giúp bạn nhận ra khi nào nên dừng.</p></div>
+<div class="lesson"><span>BÀI HỌC #02</span><p>Thua lỗ không giết bạn.<br>Ảo tưởng thì có.</p></div>
+<div class="lesson"><span>BÀI HỌC #03</span><p>Bạn không thua vì ngu.<br>Bạn thua vì không chịu dừng.</p></div>
+<div class="lesson"><span>BÀI HỌC #04</span><p>Mọi cú sập đều bắt đầu<br>từ một lần không cắt lỗ.</p></div>
+<div class="lesson"><span>BÀI HỌC #05</span><p>Thị trường không nợ bạn điều gì.</p></div>
 
-    <div class="lesson">
-      <div class="lesson-number">Bài học ZERO #04</div>
-      <div class="lesson-text">
-        Tôi không quản lý rủi ro<br />
-        khi tôi tin rằng mình hiểu câu chuyện đủ sâu.
-      </div>
-    </div>
+<div class="lesson"><span>BÀI HỌC #06</span><p>Bạn thua không phải vì sai.<br>Bạn thua vì không chấp nhận mình sai.</p></div>
+<div class="lesson"><span>BÀI HỌC #07</span><p>Giữ lệnh không phải là niềm tin.<br>Đó thường là hy vọng.</p></div>
+<div class="lesson"><span>BÀI HỌC #08</span><p>Hy vọng là thứ đắt nhất trong crypto.</p></div>
+<div class="lesson"><span>BÀI HỌC #09</span><p>Bạn không cần vào sớm.<br>Bạn cần vào đúng.</p></div>
+<div class="lesson"><span>BÀI HỌC #10</span><p>Người thắng lâu dài<br>là người thua ít nhất.</p></div>
 
-    <div class="lesson">
-      <div class="lesson-number">Bài học ZERO #05</div>
-      <div class="lesson-text">
-        Tôi gọi đó là chiến lược.<br />
-        Nhưng thực ra, tôi chỉ đang hy vọng có lý do.
-      </div>
-    </div>
+<div class="lesson"><span>BÀI HỌC #11</span><p>Mỗi lần all-in<br>là một lần bạn bỏ qua rủi ro.</p></div>
+<div class="lesson"><span>BÀI HỌC #12</span><p>Thị trường không quan tâm<br>bạn cần gỡ bao nhiêu.</p></div>
+<div class="lesson"><span>BÀI HỌC #13</span><p>Càng muốn gỡ nhanh<br>càng chết nhanh.</p></div>
+<div class="lesson"><span>BÀI HỌC #14</span><p>Không vào lệnh<br>cũng là một quyết định.</p></div>
+<div class="lesson"><span>BÀI HỌC #15</span><p>Bạn không bỏ lỡ cơ hội.<br>Bạn chỉ tránh được rủi ro.</p></div>
 
-    <footer class="zero-footer">
-      <nav class="zero-footer-nav">
-        <a href="/">ZERO</a>
-        <a href="/bai-hoc-zero.html">Bài học ZERO</a>
-        <a href="/cau-hoi-zero.html">Câu hỏi ZERO</a>
-        <a href="/confession-zero.html">Confession ZERO</a>
-      </nav>
-      <div>ZERO Academy · zerocanon.xyz</div>
-    </footer>
+<div class="lesson"><span>BÀI HỌC #16</span><p>Không có kèo chắc.<br>Chỉ có quản trị kém.</p></div>
+<div class="lesson"><span>BÀI HỌC #17</span><p>Lãi lớn thường đến<br>sau rất nhiều lần không vào.</p></div>
+<div class="lesson"><span>BÀI HỌC #18</span><p>Market không lừa bạn.<br>Bạn tự lừa mình.</p></div>
+<div class="lesson"><span>BÀI HỌC #19</span><p>Đừng hỏi bao giờ lên.<br>Hãy hỏi nếu sai thì sao.</p></div>
+<div class="lesson"><span>BÀI HỌC #20</span><p>Bạn không thiếu kiến thức.<br>Bạn thiếu kỷ luật.</p></div>
 
+<div class="lesson"><span>BÀI HỌC #21</span><p>Mỗi lần phá kỷ luật<br>là một lần trả học phí.</p></div>
+<div class="lesson"><span>BÀI HỌC #22</span><p>Thị trường tồn tại<br>lâu hơn tiền của bạn.</p></div>
+<div class="lesson"><span>BÀI HỌC #23</span><p>Bạn không cần thắng hôm nay.<br>Bạn cần còn tiền ngày mai.</p></div>
+<div class="lesson"><span>BÀI HỌC #24</span><p>Giữ tiền<br>là một kỹ năng.</p></div>
+<div class="lesson"><span>BÀI HỌC #25</span><p>Không ai phá sản<br>vì đứng ngoài.</p></div>
+
+<div class="lesson"><span>BÀI HỌC #26</span><p>Mỗi chu kỳ<br>đều kết thúc bằng ZERO.</p></div>
+<div class="lesson"><span>BÀI HỌC #27</span><p>Bạn không khác số đông<br>khi bạn cũng không chịu dừng.</p></div>
+<div class="lesson"><span>BÀI HỌC #28</span><p>Tin tức không cứu được<br>một vị thế sai.</p></div>
+<div class="lesson"><span>BÀI HỌC #29</span><p>Phân tích không cứu được<br>cảm xúc yếu.</p></div>
+<div class="lesson"><span>BÀI HỌC #30</span><p>Market không cần bạn.<br>Bạn cần market.</p></div>
+
+<div class="lesson"><span>BÀI HỌC #31</span><p>Bạn chỉ biết mình giỏi<br>sau khi sống sót qua thua lỗ.</p></div>
+<div class="lesson"><span>BÀI HỌC #32</span><p>Lợi nhuận không nằm ở kèo.<br>Nó nằm ở cách bạn quản lý.</p></div>
+<div class="lesson"><span>BÀI HỌC #33</span><p>Càng giao dịch nhiều<br>càng dễ sai.</p></div>
+<div class="lesson"><span>BÀI HỌC #34</span><p>Đứng ngoài<br>là cách bảo toàn tỉnh táo.</p></div>
+<div class="lesson"><span>BÀI HỌC #35</span><p>Bạn không cần chứng minh<br>mình đúng.</p></div>
+
+<div class="lesson"><span>BÀI HỌC #36</span><p>Bạn chỉ cần<br>không sai liên tiếp.</p></div>
+<div class="lesson"><span>BÀI HỌC #37</span><p>Market thưởng cho người kiên nhẫn.<br>Không thưởng cho người liều.</p></div>
+<div class="lesson"><span>BÀI HỌC #38</span><p>Không phải lúc nào vào lệnh<br>cũng là hành động.</p></div>
+<div class="lesson"><span>BÀI HỌC #39</span><p>Dám dừng<br>là một dạng can đảm.</p></div>
+<div class="lesson"><span>BÀI HỌC #40</span><p>Đây không phải dự án.<br>Đây là nơi tôi đã dừng lại.</p></div>
+
+<!-- ===== ZERO IFO ===== -->
+<section class="zero-ifo">
+  <div class="ifo-row"><span class="ifo-label">X</span><a href="https://x.com/zero_not_0">x.com/zero_not_0</a></div>
+  <div class="ifo-row"><span class="ifo-label">Telegram</span><a href="https://t.me/zero_not_0">t.me/zero_not_0</a></div>
+  <div class="ifo-row"><span class="ifo-label">TikTok</span><a href="https://tiktok.com/@zero_not_0">tiktok.com/@zero_not_0</a></div>
+  <div class="ifo-row">
+    <span class="ifo-label">Contract</span>
+    <span class="ifo-contract" id="zeroContract">0xa114fbc9c67e76666d4d5dca5c8fad27a525333e</span>
+    <button class="ifo-copy" onclick="copyZero()">copy</button>
   </div>
+  <div class="ifo-note">ZERO tồn tại như một lời nhắc. Không phải lời khuyên đầu tư.</div>
+</section>
+
+<nav class="zero-footer-nav">
+  <a href="/">ZERO</a>
+  <a href="/gioi-thieu-zero.html">Giới thiệu</a>
+  <a href="/bai-hoc-zero.html">Bài học</a>
+  <a href="/cau-hoi-zero.html">Câu hỏi</a>
+  <a href="/confession-zero.html">Confession</a>
+</nav>
+
+</div>
+
+<script>
+function copyZero(){
+  navigator.clipboard.writeText(
+    document.getElementById("zeroContract").innerText
+  );
+}
+</script>
 </body>
 </html>
