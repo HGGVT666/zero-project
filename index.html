@@ -11,49 +11,44 @@
   <!-- End Cloudflare Web Analytics -->
 
   <style>
-    body {
+    body{
       font-family: Georgia,"Times New Roman",serif;
       background:#fff;
       color:#111;
       margin:0;
       padding:40px 20px;
-      line-height:1.8;
+      line-height:1.8
     }
     .container{max-width:720px;margin:0 auto}
+    h1{font-size:32px;font-weight:normal;margin-bottom:40px}
+    p,li{font-size:18px}
+    ul{padding-left:20px;margin-bottom:30px}
+    li{margin-bottom:10px}
+
+    .zero-footer-nav{
+      display:flex;flex-wrap:wrap;gap:14px;
+      margin-top:80px;font-size:14px;opacity:.7
+    }
+    .zero-footer-nav a{text-decoration:none;color:inherit}
+    .zero-footer-nav a:not(:last-child)::after{
+      content:" /";opacity:.4;margin-left:2px
+    }
+
+    .zero-ifo{
+      margin-top:80px;padding-top:30px;
+      border-top:1px solid #e5e5e5;font-size:14px;color:#444
+    }
+    .ifo-row{display:flex;gap:12px;margin-bottom:10px}
+    .ifo-label{min-width:80px;color:#777}
+    .ifo-contract{
+      font-family:monospace;font-size:13px;word-break:break-all
+    }
+    .ifo-copy{
+      border:none;background:none;
+      font-size:12px;cursor:pointer;color:#777
+    }
+    .ifo-note{margin-top:20px;font-size:12px;color:#888}
   </style>
-</head>
-</head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ZERO</title>
-
-<style>
-body{
-  font-family: Georgia,"Times New Roman",serif;
-  background:#fff;color:#111;
-  margin:0;padding:40px 20px;line-height:1.8}
-.container{max-width:720px;margin:0 auto}
-h1{font-size:32px;font-weight:normal;margin-bottom:40px}
-p,li{font-size:18px}
-ul{padding-left:20px;margin-bottom:30px}
-li{margin-bottom:10px}
-
-.zero-footer-nav{
-  display:flex;flex-wrap:wrap;gap:14px;
-  margin-top:80px;font-size:14px;opacity:.7}
-.zero-footer-nav a{text-decoration:none;color:inherit}
-.zero-footer-nav a:not(:last-child)::after{
-  content:" /";opacity:.4;margin-left:2px}
-
-.zero-ifo{
-  margin-top:80px;padding-top:30px;
-  border-top:1px solid #e5e5e5;font-size:14px;color:#444}
-.ifo-row{display:flex;gap:12px;margin-bottom:10px}
-.ifo-label{min-width:80px;color:#777}
-.ifo-contract{font-family:monospace;font-size:13px;word-break:break-all}
-.ifo-copy{border:none;background:none;font-size:12px;cursor:pointer;color:#777}
-.ifo-note{margin-top:20px;font-size:12px;color:#888}
-</style>
 </head>
 
 <body>
@@ -65,16 +60,16 @@ li{margin-bottom:10px}
 
 <p>Ở đây không có:</p>
 <ul>
-<li>lời hứa lợi nhuận</li>
-<li>chỉ dẫn giao dịch</li>
-<li>người dẫn đường</li>
+  <li>lời hứa lợi nhuận</li>
+  <li>chỉ dẫn giao dịch</li>
+  <li>người dẫn đường</li>
 </ul>
 
 <p>Chỉ có:</p>
 <ul>
-<li>những bài học sau khi đã mất</li>
-<li>những câu hỏi trước khi hành động</li>
-<li>những lời thú nhận khi không còn muốn khoe chiến thắng</li>
+  <li>những bài học sau khi đã mất</li>
+  <li>những câu hỏi trước khi hành động</li>
+  <li>những lời thú nhận khi không còn muốn khoe chiến thắng</li>
 </ul>
 
 <p>Nếu bạn đang tìm một cơ hội,<br>bạn có thể rời đi ngay.</p>
@@ -86,10 +81,14 @@ li{margin-bottom:10px}
   <div class="ifo-row"><span class="ifo-label">TikTok</span><a href="https://tiktok.com/@zero_not_0">tiktok.com/@zero_not_0</a></div>
   <div class="ifo-row">
     <span class="ifo-label">Contract</span>
-    <span class="ifo-contract" id="zeroContract">0xa114fbc9c67e76666d4d5dca5c8fad27a525333e</span>
+    <span class="ifo-contract" id="zeroContract">
+      0xa114fbc9c67e76666d4d5dca5c8fad27a525333e
+    </span>
     <button class="ifo-copy" onclick="copyZero()">copy</button>
   </div>
-  <div class="ifo-note">ZERO tồn tại như một lời nhắc. Không phải lời khuyên đầu tư.</div>
+  <div class="ifo-note">
+    ZERO tồn tại như một lời nhắc. Không phải lời khuyên đầu tư.
+  </div>
 </section>
 
 <nav class="zero-footer-nav">
