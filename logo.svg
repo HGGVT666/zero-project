@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Blue gradient ring -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2a4a"/>
+      <stop offset="50%" stop-color="#2aa3ff"/>
+      <stop offset="100%" stop-color="#0a2a4a"/>
+    </linearGradient>
+
+    <!-- Infinity gradient -->
+    <linearGradient id="infGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5fd1ff"/>
+      <stop offset="50%" stop-color="#2aa3ff"/>
+      <stop offset="100%" stop-color="#5fd1ff"/>
+    </linearGradient>
+
+    <!-- Soft shadow -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Outer dark circle -->
+  <circle cx="256" cy="256" r="240" fill="#0b0f14"/>
+
+  <!-- Blue gradient ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="url(#ringGrad)" stroke-width="36" filter="url(#softShadow)"/>
+
+  <!-- Inner dark circle -->
+  <circle cx="256" cy="256" r="170" fill="#070a0e"/>
+
+  <!-- Infinity symbol -->
+  <path
+    d="M140,280
+       C140,220 200,190 256,230
+       C312,270 372,240 372,180
+       C372,120 312,90 256,130
+       C200,170 140,140 140,80"
+    fill="none"
+    stroke="url(#infGrad)"
+    stroke-width="36"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    transform="translate(0,80)"
+  />
+
+  <!-- Slash (reset line) -->
+  <line x1="110" y1="380" x2="402" y2="132"
+        stroke="#ffffff" stroke-width="26" stroke-linecap="round"/>
+</svg>
