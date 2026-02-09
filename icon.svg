@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2a4a"/>
+      <stop offset="50%" stop-color="#2aa3ff"/>
+      <stop offset="100%" stop-color="#0a2a4a"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="16" cy="16" r="15" fill="#0b0f14"/>
+  <circle cx="16" cy="16" r="13" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+  <circle cx="16" cy="16" r="10" fill="#070a0e"/>
+
+  <!-- Simplified infinity -->
+  <path d="M6,17 C6,14 9,13 12,15 C15,17 18,16 18,13
+           C18,10 15,9 12,11 C9,13 6,12 6,9"
+        fill="none" stroke="#5fd1ff" stroke-width="2.2"
+        stroke-linecap="round" transform="translate(0,3)"/>
+
+  <!-- Slash -->
+  <line x1="6" y1="26" x2="26" y2="8"
+        stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
